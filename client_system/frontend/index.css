@@ -1,0 +1,147 @@
+*{
+    padding:0;
+    margin:0;
+    outline:none;
+    font-family: "Microsoft YaHei","Microsoft YaHei UI Light",sans-serif;
+}
+body{
+    max-height:100vh;
+}
+ul{
+    list-style-type: none;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.cl{
+    clear:both;
+}
+
+/*设置全局alert 样式*/
+flash-message{
+    position: absolute;
+    text-align: center;
+    right:0px;
+    margin-top: 30px;
+    z-index:99;
+}
+.alert{
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.alert.ng-enter{
+    opacity: 0;
+}
+.alert.ng-enter.ng-enter-active{
+    opacity: 1;
+}
+.alert.ng-leave{
+    opacity: 1;
+}
+.alert.ng-leave.ng-leave-active{
+    opacity: 0;
+}
+button{
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+.ng-hide{
+    -webkit-transition: 0s;
+    -moz-transition: 0s;
+    -ms-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+}
+.slideIn{
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.slideIn.ng-leave{
+    -webkit-transition: 0s!important;
+    -moz-transition: 0s!important;
+    -ms-transition: 0s!important;
+    -o-transition: 0s!important;
+    transition: 0s!important;
+}
+.slideIn.ng-enter{
+    /*opacity:0;*/
+    -webkit-transform: translateX(30px);
+    -moz-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    -o-transform: translateX(30px);
+    transform: translateX(30px);
+}
+.slideIn.ng-enter.ng-enter-active{
+    /*opacity:1;*/
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.fadeOut{
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.fadeOut.ng-leave{
+    -webkit-transition: 0s;
+    -moz-transition: 0s;
+    -ms-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+}
+.fadeOut.ng-enter{
+    opacity:1;
+}
+.fadeOut.ng-leave.ng-leave-active{
+    opacity: 0;
+}
+
+.pagination li{
+    margin-top: 20px;
+    float:left;
+    border:1px solid #d3d3d3;
+    border-right:0px;
+}
+.pagination li:first-child{
+    border-radius: 5px 0px 0px 5px;
+}
+.pagination li:last-child{
+    border-right:1px solid #d3d3d3;
+    border-radius:0px 5px 5px 0px;
+}
+.pagination li.active{
+    background-color: #337ab7;
+}
+.pagination li.active a{
+    color:snow;
+}
+.pagination li:hover{
+    background-color: #eeeeee;
+}
+.pagination li.active:hover{
+    background-color: #337ab7;
+}
+.pagination li a{
+    font-size:14px;
+    display: block;
+    padding:5px 13px;
+    text-decoration: none;
+    color:#337ab7;
+}

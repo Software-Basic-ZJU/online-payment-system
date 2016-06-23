@@ -1,0 +1,6 @@
+<div class="filterTabs">
+    <button type="button" ng-repeat="tab in tabsList"
+            ng-click="filter(tab)"
+            ng-class="{active:filtType===tab}">{{tab}}<i class="iconfont" ng-if="icon">{{icon}}</i></button>
+    <code ng-transclude></code>
+</div>

@@ -1,0 +1,91 @@
+.flightItem{
+    padding:20px 0px 10px 0px;
+    border-bottom:1px solid #e1eaec;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.flightItem>*{
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.flightItem:hover{
+    background-color: #f6fdff;
+    border-bottom-color: #0099CC;
+}
+.flightItem>.fl{
+    height:100px;
+}
+.flightItem>.infoBox{
+    width:30%;
+    border-right:1px solid #e1eaec;
+}
+.flightItem>.infoBox>div{
+    height:32px;
+    line-height:32px;
+}
+.flightItem>.infoBox>.company{
+    margin-top:0px;
+}
+.flightItem>.infoBox>.flightId{
+    color:#0099CC;
+    font-size:18px;
+}
+.flightItem>.infoBox>.date{
+    font-size:20px;
+}
+
+.flightItem>.flightBox{
+    width:45%;
+    border-right:1px solid #e1eaec;
+    text-align: center;
+}
+.flightItem>.flightBox>.fromBox,
+.flightItem>.flightBox>.toBox{
+    margin-top:-40px;
+    margin-left:20px;
+    margin-right:20px;
+}
+.flightItem>.flightBox i{
+    display: block;
+    font-size:32px;
+    margin-top:25px;
+}
+.flightItem>.flightBox>.fromBox>.leaveTime,
+.flightItem>.flightBox>.toBox>.reachTime{
+    font-size:28px;
+    color:#0099CC;
+}
+.flightItem>.flightBox>.fromBox>.fromPort,
+.flightItem>.flightBox>.toBox>.toPort{
+    font-size:16px;
+    margin-top: 5px;
+}
+.flightItem>.price{
+    width:130px;
+    line-height:90px;
+    text-align: center;
+    color:#ff9113;
+    font-size:26px;
+    padding:0px 10px;
+}
+.flightItem>button{
+    margin-right:20px;
+    padding:10px 20px;
+    cursor: pointer;
+    border:0;
+    background-color: #0099CC;
+    color:white;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.flightItem>button:hover{
+    background-color: #00ade7;
+}

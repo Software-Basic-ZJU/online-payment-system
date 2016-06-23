@@ -1,0 +1,60 @@
+<order-detail>
+    <div class="header">
+        <div class="navBox">
+            <div class="tagBtn tagTitle" ui-sref="main.order"><i class="iconfont">&#xe601;</i>订单记录</div>
+            <div class="tagBtn backBtn" ng-click="goBack()">返回</div>
+        </div>
+    </div>
+    <img ng-src="../../static/img/loading.gif" class="loading" ng-show="!isLoaded" />
+    <div class="detail box slideIn" ng-if="isLoaded">
+        <div class="stateBox">
+            <div class="currState">当前订单交易状态:&nbsp;<span class="state">{{state}}</span></div>
+            <button class="rateBtn" ng-if="isCompleted">评价</button>
+        </div>
+        <div class="detailBox">
+            <span class="tag">订单详情</span>
+            <div class="goodsInfo">
+                <h4>订单信息</h4>
+                <ul>
+                    <li title="{{orderId}}">订单编号：{{orderId}}</li>
+                    <li>商品编号：ddd</li>
+                    <li title="{{orderContent}}">商品名称：{{orderContent}}</li>
+                </ul>
+                <ul>
+                    <li>订单价格：ddd</li>
+                    <li>付款时间：ddd</li>
+                    <li>确认时间：ddd</li>
+                </ul>
+            </div>
+            <div class="sellerInfo">
+                <h4>卖家信息</h4>
+                <ul>
+                    <li>昵称:LowesYang</li>
+                    <li>真实姓名:</li>
+                    <li>城市</li>
+                </ul>
+                <ul>
+                    <li>卖家ID:</li>
+                    <li>联系电话:</li>
+                    <li>城市:</li>
+                </ul>
+            </div>
+            <div class="priceBox">实付款:&nbsp;<strong class="price">{{price}}</strong>元</div>
+            <div class="btnBox">
+                <button class="deleteOrderBtn" ng-if="isNonPay" ng-click="goModal('Cancel',orderId,orderContent)">取消订单</button>
+                <button class="goPayBtn" ng-if="isNonPay" ng-click="goModal('Pay',orderId,orderContent)">去支付</button>
+                <button class="complainBtn" ng-if="!isNonPay" ng-click="goModal('Complain',orderId,orderContent)">申诉</button>
+                <button class="refundBtn" ng-if="!isNonPay" ng-click="goModal('Refund',orderId,orderContent)">退款</button>
+                <button class="confirmBtn" ng-if="isWaitShip" ng-click="goModal('Confirm',orderId,orderContent)">确认收货</button>
+            </div>
+            <div class="cl"></div>
+        </div>
+    </div>
+    <modal>
+        <order-pay></order-pay>
+        <order-refund></order-refund>
+        <order-cancel></order-cancel>
+        <order-complain></order-complain>
+        <order-confirm></order-confirm>
+    </modal>
+</order-detail>

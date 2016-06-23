@@ -1,0 +1,109 @@
+order-detail .detail{
+    margin-top:40px;
+    width:100%;
+}
+order-detail .detail>div{
+    width:96%;
+    margin:20px auto;
+}
+order-detail .detail button{
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+order-detail .stateBox>.currState{
+    font-size: 24px;
+    letter-spacing:2px;
+    display: inline-block;
+}
+order-detail .stateBox>.currState>.state{
+    color:#238ef0;
+}
+order-detail .stateBox>.rateBtn{
+    background-color: #238ef0;
+    color:white;
+    border:1px solid #f8fafc;
+    font-size:16px;
+    padding:5px 15px;
+    cursor:pointer;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+order-detail .stateBox>.rateBtn:hover{
+    background-color: #2fb0ff;
+}
+
+order-detail .detailBox{
+    margin: 30px auto;
+    border:2px solid #ebeef5;
+}
+order-detail .detailBox>div{
+    width:96%;
+    margin:20px auto;
+}
+order-detail .detailBox>div>ul{
+    display: block;
+    width:95%;
+    margin-top: 15px;
+}
+order-detail .detailBox>div>ul>li{
+    display: inline-block;
+    margin-right: 10%;
+    margin-top: 15px;
+    max-width:40%;
+}
+order-detail .detailBox>div>ul:last-child>li{
+    margin-right:5%;
+}
+order-detail .detailBox>.tag{
+    display: block;
+    width:120px;
+    height:40px;
+    line-height:40px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #ebeef5;
+}
+order-detail .detailBox>.goodsInfo{
+    border-bottom:1px solid #d3d3d3;
+    padding-bottom:30px;
+}
+order-detail .detailBox>.goodsInfo>.detailInfo{
+    margin-top: 20px;
+    font-size:24px;
+    color:#238ef0;
+}
+order-detail .detailBox>.priceBox{
+    float:right;
+    width:200px;
+    height:40px;
+    line-height:40px;
+    text-align: center;
+    font-size:22px;
+    margin-right: 20px;
+}
+order-detail .detailBox>.priceBox>.price{
+    color:#ff5500;
+    font-size: 22px;
+}
+order-detail .detailBox>.btnBox{
+    float:right;
+    width:auto;
+    height:40px;
+    line-height:40px;
+    margin-top:20px;
+}
+order-detail .detailBox>.btnBox>button{
+    padding:10px 15px;
+    border:0;
+    font-size:16px;
+    color:white;
+    background-color: #238ef0;
+    cursor:pointer;
+    margin-left:10px;
+}
+order-detail .detailBox>.btnBox>button:hover{
+    background-color: #2ebcff;
+}

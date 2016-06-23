@@ -1,0 +1,16 @@
+<div class="mdfyPay" ng-if="showMdfyPay">
+    <h2>修改支付密码</h2>
+    <form>
+        <div>
+            原密码:<input type="password" placeholder="原支付密码" ng-model="mdfyPayForm.oldPswd">
+        </div>
+        <div>
+            新密码:<input type="password" placeholder="新支付密码" ng-model="mdfyPayForm.newPswd">
+        </div>
+        <div class="confirmBox">
+            确认密码:<input type="password" placeholder="确认密码" ng-model="mdfyPayForm.confirmNew">
+        </div>
+        <button type="submit" class="fr" ng-click="goMdfyPay()" ng-show="isLoaded">确认修改</button>
+        <img class="loading fr" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+    </form>
+</div>

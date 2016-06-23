@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>审计员操作界面</title>
+<link rel="stylesheet" href="../css/bootstrap-table.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<style type="text/css">
+.demo{width:760px;  height:70px;}
+.button {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 16px/100% 'Microsoft yahei',Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+.bigrounded {
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+}
+.medium {
+	font-size: 12px;
+	padding: .4em 1.5em .42em;
+}
+.small {
+	font-size: 11px;
+	padding: .2em 1em .275em;
+}
+
+/* blue */
+.blue {
+	color: #d9eef7;
+	border: solid 1px #0076a3;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+}
+.blue:hover {
+	background: #007ead;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+	background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+}
+.blue:active {
+	color: #80bed6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+	background: -moz-linear-gradient(top,  #0078a5,  #00adee);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+}
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><span>审计员</span>操作</a>
+				<ul class="user-menu">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> 用户 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="password.html"><span class="glyphicon glyphicon-cog"></span> 修改密码</a></li>
+							<li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> 退出登录</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+							
+		</div><!-- /.container-fluid -->
+	</nav>
+		
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<ul class="nav menu">
+			<li><a href="index.html"><span class="glyphicon glyphicon-dashboard"></span>查看交易记录</a></li>
+			<li class="active"><a href="audit.html"><span class="glyphicon glyphicon-th"></span>审计</a></li>
+			<li><a href="charts.html"><span class="glyphicon glyphicon-stats"></span>图表统计</a></li>
+			<li><a href="account.html"><span class="glyphicon glyphicon-list-alt"></span>对账</a></li>
+			<li><a href="search.html"><span class="glyphicon glyphicon-pencil"></span>检索</a></li>
+			<!--<li><a href="panels.html"><span class="glyphicon glyphicon-info-sign"></span> 功能 &amp; 暂定</a></li>
+			<li class="parent ">
+				<a href="#">
+					<span class="glyphicon glyphicon-list"></span> Dropdown <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
+				</a>
+				<ul class="children collapse" id="sub-item-1">
+					<li>
+						<a class="" href="#">
+							<span class="glyphicon glyphicon-share-alt"></span> Sub Item 1
+						</a>
+					</li>
+					<li>
+						<a class="" href="#">
+							<span class="glyphicon glyphicon-share-alt"></span> Sub Item 2
+						</a>
+					</li>
+					<li>
+						<a class="" href="#">
+							<span class="glyphicon glyphicon-share-alt"></span> Sub Item 3
+						</a>
+					</li>
+				</ul>
+			</li> -->
+			<li role="presentation" class="divider"></li>
+			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span>登录页面</a></li>
+		</ul>
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">		
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+				<li class="active">审计</li>
+			</ol>
+		</div><!--/.row-->		
+	</div>	<!--/.main-->
+		  
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+    <script src="../js/bootstrap-table.js"></script>
+	
+	
+	<script src="js/bootstrap-datepicker.js"></script>
+
+	
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">	
+	   <div id="main">
+		<ul id="myTab" class="nav nav-tabs">
+           <li class="active"><a href="#yifu" data-toggle="tab" id="yifu">已付款</a></li>
+		   <li><a href="#weifu" data-toggle="tab" id="weifu">未付款</a></li>
+		   <li><a href="#weifa" data-toggle="tab" id="weifa">未发货</a></li>
+		   <li><a href="#tuikuan" data-toggle="tab" id="tuikuan">退款</a></li>
+		   <li><a href="#shentui" data-toggle="tab" id="shentui">申请退款</a></li>
+		   <li><a href="#success" data-toggle="tab" id="success">成功</a></li>
+		   <li><a href="#fail" data-toggle="tab" id="fail">失败</a></li>
+		   <li><a href="#shensu" data-toggle="tab" id="shensu">申诉中</a></li>
+		   </ul>
+		  </div>
+		  
+          
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+				<li class="active">交易记录</li>
+			</ol>
+		</div><!--/.row-->
+		<table cellpadding="1" cellspacing="0" style="width:712px; margin-left:30px;">
+		<thead>
+		<tr>
+		    
+			<td>订单号</td>
+			<td>商品号</td>
+			<td>商品数量</td>
+			<td>价格</td>
+			<td>买方</td>
+			<td>卖方</td>
+			<td>订单状态</td>
+			<td>开始时间</td>
+			<td>结束时间</td>
+		</tr>
+		</thead>
+		<tbody id="tb1">
+		</tbody>
+		
+		</tbody>
+		</table>
+		
+		</tbody>
+		</table>
+		</div>
+		</div>
+		
+	</div>	<!--/.main-->
+	
+		<script src="js/audit.js"></script>
+</body>
+
+
+</html>

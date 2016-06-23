@@ -1,0 +1,31 @@
+
+.mdfyPay>form>div{
+    margin-top: 20px;
+    margin-left: 16px;
+}
+.mdfyPay>form>.confirmBox{
+    margin-left:0px;
+}
+.mdfyPay>form>div>input{
+    width:200px;
+    height:20px;
+    padding:5px;
+    margin-left: 20px;
+    margin-right:10px;
+    border:1px solid #cccccc;
+}
+.mdfyPay>form>div>input:focus{
+    border-color:#0099CC;
+}
+.mdfyPay>form>button{
+    margin-top: 20px;
+    margin-right:10px;
+    border:0;
+    padding:8px 15px;
+    background-color: #248ef0;
+    color:white;
+    cursor: pointer;
+}
+.mdfyPay>form>button:hover{
+    background-color: #2ebcff;
+}

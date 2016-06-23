@@ -1,0 +1,46 @@
+.replyBox{
+    width:250px;
+    height:340px;
+}
+.replyBox .orderId{
+    margin-top: 5px;
+}
+.replyBox .orderContent{
+    margin-top:5px;
+}
+.replyBox>.loading{
+    padding-top:100px;
+    width:50px;
+    height:50px;
+}
+.replyBox form>.scoreBox{
+    margin-top:5px;
+    margin-bottom: 10px;
+}
+.replyBox form>textarea{
+    padding:5px;
+    margin-top:5px;
+    width:250px;
+    height:100px;
+}
+.replyBox form>button{
+    display: block;
+    margin-top: 15px;
+    border:0px;
+    padding:8px 15px;
+    color:white;
+    background-color: #238ef0;
+    cursor:pointer;
+}
+.replyBox>form>button:hover{
+    background-color: #2ebcff;
+}
+
+.replyBox>.repliedBox{
+    text-align: center;
+    font-size:24px;
+    padding-top:100px;
+}
+.replyBox>.repliedBox>div{
+    margin-top: 20px;
+}

@@ -1,0 +1,16 @@
+<div class="payBox" ng-if="showPay">
+    <h2>支付</h2>
+    <div class="orderId">订单号:&nbsp;{{orderId}}</div>
+    <div class="orderContent">订单内容:&nbsp;{{orderContent}}</div>
+    <form>
+        <select ng-model="payForm.payWay">
+            <option value="balance">余额</option>
+            <option value="JSbank">建设银行</option>
+            <option value="GSbank">工商银行</option>
+            <option value="alipay">支付宝</option>
+        </select>
+        <input type="password" placeholder="支付密码" ng-model="payForm.payPswd">
+        <button type="submit" ng-click="confirmPay()" ng-show="isLoaded">支付</button>
+        <img class="loading" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+    </form>
+</div>

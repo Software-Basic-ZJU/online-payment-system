@@ -1,0 +1,17 @@
+<div class="rechargeBox" ng-if="showRecharge">
+    <h2>充值</h2>
+    <form>
+        <div>
+            充值卡号:<input type="text" ng-model="recForm.cardId" placeholder="充值卡号">
+        </div>
+        <div>
+            充值卡密码:<input type="password" ng-model="recForm.pswd" placeholder="充值卡密码">
+        </div>
+        <div class="idenCodeBox">
+            验证码:<br><input type="text" ng-model="recForm.idenCode" placeholder="验证码">
+            <input type="text" class="idenCode" ng-model="idenCode" readonly ng-click="changeCode()">
+        </div>
+        <button type="submit" class="fr" ng-click="goRecharge()" ng-show="isLoaded">充值</button>
+        <img class="loading fr" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+    </form>
+</div>

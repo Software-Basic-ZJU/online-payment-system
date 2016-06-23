@@ -1,0 +1,70 @@
+.loginBox>form{
+    width:250px;
+    margin:0px auto;
+}
+.loginBox>form>div{
+    margin-top:15px;
+    width:100%;
+}
+.loginBox>form>div>i{
+    display: block;
+    width:40px;
+    height:40px;
+    line-height:39px;
+    text-align: center;
+    font-size:22px;
+    background-color: #999999;
+    color:white;
+}
+.loginBox>form>div>input{
+    display: block;
+    width:200px;
+    height:40px;
+    border:1px solid #e6e9f0;
+    padding-left:5px;
+    margin-top: -1px;
+}
+.loginBox>form>a{
+    display: block;
+    margin-top: 15px;
+    margin-right:20px;
+    font-size:14px;
+    text-decoration: none;
+    color:#888888;
+}
+.loginBox>form>a:hover{
+    color:#24a7f0;
+}
+.loginBox>form>button{
+    border:0;
+    padding:5px 15px;
+    cursor:pointer;
+    margin-top: 15px;
+    margin-right:5px;
+    background-color: #248ef0;
+    color:white;
+}
+.loginBox>form>button:hover{
+    background-color: #25a3ff;
+}
+.loginBox>form>.loading{
+    margin-top: 10px;
+    margin-bottom:0;
+}
+.loginBox>form>.idenCodeBox>input{
+    height:30px;
+    padding:5px 10px;
+    display: inline-block;
+    width:110px;
+}
+.loginBox>form>.idenCodeBox>input:last-child{
+    width:87px;
+    text-align: center;
+}
+.loginBox>form>.jumping{
+    width:80px;
+    margin-top:10px;
+    font-size:16px;
+    color:#248ef0;
+    margin-right:5px;
+}

@@ -1,0 +1,36 @@
+<div class="findPswdBox" ng-if="showFindPswd">
+    <h2>找回密码</h2>
+    <form>
+        <div>
+            <i class="iconfont fl">&#xe60c;</i>
+            <input type="text" ng-model="findForm.email" placeholder="电子邮箱" class="fl">
+            <div class="cl"></div>
+        </div>
+        <div class="codeBox">
+            <i class="iconfont fl">&#xe619;</i>
+            <input type="password" ng-model="findForm.code" placeholder="邮件中的验证码" class="fl">
+            <button type="button" ng-click="sendEmail()" class="fl">{{stateName}}</button>
+            <div class="cl"></div>
+        </div>
+        <div>
+            <i class="iconfont fl">&#xe617;</i>
+            <select ng-model="findForm.type" class="fl">
+                <option value="login">登录密码</option>
+                <option value="transaction">支付密码</option>
+            </select>
+            <div class="cl"></div>
+        </div>
+        <div>
+            <i class="iconfont fl">&#xe600;</i>
+            <input type="password" ng-model="findForm.pswd" placeholder="新密码" class="fl">
+            <div class="cl"></div>
+        </div>
+        <div>
+            <i class="iconfont fl">&#xe600;</i>
+            <input type="password" ng-model="findForm.confirmPswd" placeholder="确认密码" class="fl">
+            <div class="cl"></div>
+        </div>
+        <button type="submit" class="fr" ng-click="goFindPswd()" ng-show="isLoaded">确认修改</button>
+        <img class="loading fr" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+    </form>
+</div>

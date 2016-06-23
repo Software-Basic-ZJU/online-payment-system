@@ -1,0 +1,23 @@
+<div class="cancelBox" ng-if="showCancel">
+    <h2>取消订单</h2>
+    <div class="orderId">订单号:&nbsp;{{orderId}}</div>
+    <div class="orderContent">订单内容:&nbsp;{{orderContent}}</div>
+    <div class="selectBox">
+        <p>请选择您取消订单的理由:</p>
+        <select ng-model="cancelForm.reasonTip">
+            <option  value="default">请选择取消订单理由</option>
+            <option  value="我不想买了">我不想买了</option>
+            <option  value="临时无法完成交易">临时无法完成交易</option>
+            <option  value="长时间联系不到卖家">长时间联系不到卖家</option>
+            <option  value="卖家不想卖了">卖家不想卖了</option>
+            <option  value="其他">其他</option>
+        </select>
+    </div>
+    <div class="reasonContent">
+        <p>请补充您取消订单的理由:(可选)</p>
+        <textarea  ng-model="cancelForm.reason"></textarea>
+    </div>
+    <div class="cl"></div>
+    <button type="submit" ng-click="cancel()" ng-show="isLoaded">确认取消</button>
+    <img class="loading" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+</div>

@@ -1,0 +1,27 @@
+.setPay>form>div{
+    margin-top: 20px;
+    margin-left: 16px;
+}
+.setPay>form>div>input{
+    width:200px;
+    height:20px;
+    padding:5px;
+    margin-left: 20px;
+    margin-right:10px;
+    border:1px solid #cccccc;
+}
+.setPay>form>div>input:focus{
+    border-color:#0099CC;
+}
+.setPay>form>button{
+    margin-top: 20px;
+    margin-right:10px;
+    border:0;
+    padding:8px 15px;
+    background-color: #248ef0;
+    color:white;
+    cursor: pointer;
+}
+.setPay>form>button:hover{
+    background-color: #2ebcff;
+}

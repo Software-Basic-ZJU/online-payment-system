@@ -1,0 +1,26 @@
+.confirmBox>.orderId,.confirmBox>.orderContent{
+    width:250px;
+    margin-top: 10px;
+}
+.confirmBox>.notice{
+    margin-top:15px;
+    color:crimson;
+}
+.confirmBox>form>input{
+    margin-top: 10px;
+    width:240px;
+    height:20px;
+    padding:10px;
+}
+.confirmBox>form>button{
+    display: block;
+    margin-top: 10px;
+    border:0px;
+    padding:8px 15px;
+    color:white;
+    background-color: #238ef0;
+    cursor:pointer;
+}
+.confirmBox>form>button:hover{
+    background-color: #2ebcff;
+}

@@ -1,0 +1,53 @@
+.hotelDsitem{
+    width:100%;
+    height:170px;
+    border-left:1px solid transparent;
+    border-bottom:1px solid #e1eaec;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.hotelDsitem:hover{
+    border-left:1px solid #0099CC;
+    background-color: #f6fdff;
+}
+.hotelDsitem>.infoBox{
+    width:70%;
+    padding:10px;
+    text-align: center;
+    box-sizing:border-box;
+}
+.hotelDsitem>.infoBox>div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+.hotelDsitem>.infoBox>.hotelName{
+    font-size:16px;
+    color:#0099CC;
+}
+.hotelDsitem>.infoBox>.star{
+    font-size: 14px;
+    color:#ff9113;
+}
+.hotelDsitem>.infoBox .discPrice{
+    color: #ff440a;
+    font-size:16px;
+}
+.hotelDsitem>.infoBox>.hotelAddress{
+    font-size: 14px;
+}
+.hotelDsitem>button{
+    border: 0;
+    width:30%;
+    min-height:100%;
+    background-color: transparent;
+    cursor: pointer;
+    font-size:16px;
+}
+.hotelDsitem>button:hover{
+    color: #0099CC;
+}

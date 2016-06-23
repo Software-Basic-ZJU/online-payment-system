@@ -1,0 +1,48 @@
+<flight-order>
+    <div class="box">
+        <div class="title">航班信息</div>
+        <div class="slideIn">
+             <flight-item goods-id="{{flight.goodsId}}"
+                         date="{{flight.date}}"
+                         from-city="{{flight.fromCity}}"
+                         to-city="{{flight.toCity}}"
+                         from-port="{{flight.fromPort}}"
+                         to-port="{{flight.toPort}}"
+                         leave-time="{{flight.leaveTime}}"
+                         reach-time="{{flight.reachTime}}"
+                         company="{{flight.company}}"
+                         price="{{flight.price}}"
+                         flight-id="{{flight.flightId}}"></flight-item>
+        </div>
+        <div class="psgBox">
+            <div class="title">乘机人信息 <i class="iconfont" ng-click="addPsg()">&#xe614;</i></div>
+            <div class="psgItem slideIn fadeOut" ng-repeat="item in psgList">
+                <div>乘客 {{$index+1}} <i class="iconfont" ng-click="removePsg($index)">&#xe613;</i></div>
+
+                <div class="name">
+                    姓名：<input type="text" ng-model="psgList[$index].name" placeholder="姓名,与登机时所持证件一致">
+                </div>
+                <div>
+                    <input type="radio" ng-model="psgList[$index].type" value="adult">成人
+                    <input type="radio" ng-model="psgList[$index].type" value="young">2-18周岁未成年人
+                    <input type="radio" ng-model="psgList[$index].type" value="baby">2周岁以下婴儿
+                </div>
+                <div>
+                    证件信息：
+                    <select ng-model="psgList[$index].idenType">
+                        <option value="certificate">身份证</option>
+                        <option value="passport">护照</option>
+                        <option value="others">其他</option>
+                    </select>
+                    <input type="text" ng-model="psgList[$index].idenText" placeholder="证件号码">
+                </div>
+            </div>
+            <div class="submitBox fr">
+                <button type="submit" class="fr" ng-click="submitOrder(flight.goodsId)" ng-show="isLoaded">提交订单</button>
+                <img class="loading fr" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+                <div class="price fr">总金额：¥{{flight.price}} * {{psgList.length}} = <span class="total">¥{{flight.price*psgList.length}}</span></div>
+            </div>
+            <div class="cl"></div>
+        </div>
+    </div>
+</flight-order>

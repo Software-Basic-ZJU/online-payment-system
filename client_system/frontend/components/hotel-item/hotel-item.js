@@ -1,0 +1,29 @@
+(function(){
+    angular.module('hotelItem',[
+        'ui.router'
+    ]).directive('hotelItem',function(){
+        return{
+            templateUrl:'/frontend/components/hotel-item/hotel-item.html',
+            scope:{
+                hotelId:'@',
+                name:'@',
+                star:'@',
+                score:'@',
+                address:'@',
+                replyNum:'@',
+                price:'@'
+            },
+            controller:hotelItem
+        }
+    });
+
+    function hotelItem($scope,$state,$stateParams){
+        $scope.hotelDetail=function(hotelId){
+            $state.go('booking.hotelDetail',{
+                hid:hotelId,
+                it:$stateParams.it,
+                ot:$stateParams.ot
+            })
+        }
+    }
+})();

@@ -1,0 +1,41 @@
+.commentItem{
+    padding:10px;
+    text-align: center;
+    border:1px solid #0099cc;
+}
+.commentItem>.infoBox{
+    width:30%;
+    height:120px;
+    margin-top: 20px;
+    border-right:1px solid #ececec;
+}
+.commentItem>.infoBox>.userName{
+    height:50px;
+    padding-top:10px;
+    font-size:18px;
+}
+.commentItem>.infoBox>.roomName{
+    padding-top:10px;
+    height:50px;
+    font-size:24px;
+    color:#0099cc;
+}
+.commentItem>.contentBox{
+    padding:20px;
+}
+.commentItem>.contentBox>.score{
+    height:30px;
+    margin-left: 10px;
+}
+.commentItem>.contentBox>.score>i{
+    color:#0099CC;
+    font-size:22px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.commentItem>.contentBox>.comment{
+    height:70px;
+    padding:10px;
+    width:600px;
+    text-align: left;
+}

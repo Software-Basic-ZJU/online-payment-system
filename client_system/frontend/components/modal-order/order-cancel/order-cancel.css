@@ -1,0 +1,39 @@
+.cancelBox>.orderId,.cancelBox>.orderContent{
+    width:250px;
+    margin-top: 10px;
+}
+
+.cancelBox>.selectBox{
+    width:200px;
+    margin-top: 10px;
+    padding-right:10px;
+    margin-right: 10px;
+}
+.cancelBox>.selectBox>p{
+    color:#3e3e3e;
+}
+.cancelBox>.selectBox>select{
+    display: block;
+    margin-top: 5px;
+    height:24px;
+}
+.cancelBox>.reasonContent>p{
+    margin: 10px 0px;
+}
+.cancelBox>.reasonContent>textarea{
+    padding:5px;
+    width:250px;
+    height:120px;
+}
+.cancelBox>button{
+    display: block;
+    margin-top: 10px;
+    border:0px;
+    padding:8px 15px;
+    color:white;
+    background-color: #238ef0;
+    cursor:pointer;
+}
+.cancelBox>button:hover{
+    background-color: #2ebcff;
+}

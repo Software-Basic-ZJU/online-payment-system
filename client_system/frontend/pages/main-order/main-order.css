@@ -1,0 +1,59 @@
+main-order .box{
+    margin-bottom: 60px;
+}
+main-order .orderChoice>.titleBox>.title{
+    font-size: 24px;
+}
+main-order .orderChoice>.titleBox>ul{
+    margin-top: 8px;
+}
+main-order .orderChoice>.titleBox>ul>li{
+    display: inline-block;
+    margin-left: 1%;
+    cursor: pointer;
+    padding:2px 8px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+main-order .orderChoice>.titleBox>ul>li:first-child{
+    margin-left: 0;
+}
+main-order .orderChoice>.titleBox>ul>li:hover{
+    background-color: #ebebeb;
+}
+main-order .orderChoice>.titleBox>ul>li.active{
+    color:white;
+    background-color: #999999;
+}
+main-order  .noRes{
+    margin-top: 40px;
+    text-align: center;
+    font-size:24px;
+}
+.orderList{
+    margin-top: 10px;
+}
+.orderList>table{
+    width:100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.orderList>table>thead>tr{
+    background-color: #f3f6fd;
+    height:40px;
+}
+table .content{
+    width:auto
+}
+table .price{
+    width:16%;
+}
+table .amount{
+    width:12%;
+}
+table .state{
+    width:15%;
+}
+table .action{
+    width:15%;
+}

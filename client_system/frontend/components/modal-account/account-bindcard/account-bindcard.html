@@ -1,0 +1,19 @@
+<div class="bindBox" ng-if="showBindCard">
+    <h2>绑定银行卡</h2>
+    <form>
+        所属银行:
+        <select ng-model="bindForm.bank">
+            <option value="china">中国银行</option>
+            <option value="gongshang">工商银行</option>
+            <option value="jianshe">建设银行</option>
+        </select>
+        <div>
+            银行卡号:<input type="text" ng-model="bindForm.cardId" placeholder="充值卡号">
+        </div>
+        <div>
+            银行卡密码:<input type="password" ng-model="bindForm.pswd" placeholder="银行卡密码">
+        </div>
+        <button type="submit" class="fr" ng-click="goBindCard()" ng-show="isLoaded">确定</button>
+        <img class="loading fr" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+    </form>
+</div>

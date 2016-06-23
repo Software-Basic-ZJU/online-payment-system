@@ -1,0 +1,74 @@
+.hotelFormA{
+    position: absolute;
+    width:600px;
+    height:240px;
+    padding:30px;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-color: #f6fdff;
+    border:1px solid #0099CC;
+    font-size:14px;
+}
+.hotelFormA>form input{
+    height:30px;
+    border:1px solid #cccccc;
+    border-left:0px;
+    padding-left:10px;
+}
+.hotelFormA>form select{
+    width:120px;
+    height:30px;
+    padding-left:5px;
+}
+.hotelFormA>form>div{
+    margin-top: 20px;
+}
+.hotelFormA>form>.fl{
+    margin-right: 16px;
+}
+.hotelFormA>form .title{
+    height:30px;
+    line-height:30px;
+    border:1px solid #cccccc;
+    background-color: white;
+    border-right:0px;
+    padding-left:5px;
+}
+.hotelFormA>form>.city{
+    width:400px;
+}
+.hotelFormA>form>.city>input{
+    width:260px;
+}
+.hotelFormA>form>.dateBox{
+    display: inline-block;
+    width:250px;
+    margin-right: 45px;
+}
+.hotelFormA>form>.dateBox>datepicker{
+    width:150px;
+}
+.hotelFormA>form>.dateBox input{
+    width: 210px;
+    font-weight:bold;
+}
+.hotelFormA>form>button{
+    border:0;
+    padding:10px 20px;
+    margin:20px 17px;
+    margin-bottom:0px;
+    background-color: #0099CC;
+    color:white;
+    cursor:pointer;
+    -webkit-transition:  0.3s;
+    -moz-transition:  0.3s;
+    -ms-transition:  0.3s;
+    -o-transition:  0.3s;
+    transition:  0.3s;
+}
+.hotelFormA>form>button:hover{
+    background-color: #00aae2;
+}

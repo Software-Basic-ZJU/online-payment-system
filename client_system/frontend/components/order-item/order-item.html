@@ -1,0 +1,44 @@
+<div class="orderItem">
+    <table>
+        <tr>
+            <td colspan="2">{{time}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订单号:{{orderId}}</td>
+            <td colspan="2">{{seller}}</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td class="content">{{content}}</td>
+            <td class="price">{{price}}</td>
+            <td class="amount">{{amount}}</td>
+            <td class="state">{{state}}</td>
+            <td class="action">
+                <a href="" ng-click="goDetail(orderId)">查看详情</a>
+                <Div class="success" ng-if="isSuccess">
+                    <a href="" ng-click="goModal('Reply',orderId,content)">评价</a>
+                </Div>
+                <div class="nonPayAction" ng-if="isNonPay">
+                    <div ng-if="isBuyer">
+                        <a href="" ng-click="goModal('Pay',orderId,content)">支付</a>
+                        <a href="" ng-click="goModal('Cancel',orderId,content)">取消订单</a>
+                    </div>
+                </div>
+                <div class="shipAction" ng-if="isWaitShip">
+                    <div ng-if="isBuyer">
+                        <a href="" ng-click="goModal('Refund',orderId,content)">退款</a>
+                        <a href="" ng-click="goModal('Complain',orderId,content)">申诉</a>
+                    </div>
+                </div>
+                <div class="confirmAction" ng-if="isWaitConfirm">
+                    <div ng-if="isBuyer">
+                        <a href="" ng-click="goModal('Refund',orderId,content)">退款</a>
+                        <a href="" ng-click="goModal('Confirm',orderId,content)">确认收货</a>
+                    </div>
+                    <a href="" ng-click="goModal('Complain',orderId,content)">申诉</a>
+                </div>
+                <div class="refundingAction" ng-if="!isBuyer&&refunding">
+                    <a href="" ng-click="decideRefund(1,orderId,price)">同意退款</a>
+                    <a href="" ng-click="decideRefund(2,orderId,price)">拒绝退款</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

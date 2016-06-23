@@ -1,0 +1,85 @@
+.findPswdBox>form{
+    width:250px;
+    margin:0px auto;
+}
+.findPswdBox>form>div{
+    margin-top:15px;
+    width:100%;
+}
+.findPswdBox>form>div>i{
+    display: block;
+    width:40px;
+    height:40px;
+    line-height:39px;
+    text-align: center;
+    font-size:22px;
+    background-color: #999999;
+    color:white;
+}
+.findPswdBox>form>div>input{
+    display: block;
+    width:200px;
+    height:40px;
+    border:1px solid #e6e9f0;
+    padding-left:5px;
+    margin-top: -1px;
+}
+.findPswdBox>form>.codeBox>input{
+    width:120px;
+}
+.findPswdBox>form>.codeBox>button{
+    width:80px;
+    height:40px;
+    border:0px;
+    background-color: #696969;
+    color:white;
+    cursor:pointer;
+}
+.findPswdBox>form>.codeBox>button:hover{
+    background-color: #868686;
+}
+.findPswdBox>form>a{
+    display: block;
+    margin-top: 15px;
+    margin-right:20px;
+    font-size:14px;
+    text-decoration: none;
+    color:#888888;
+}
+.findPswdBox>form>a:hover{
+    color:#24a7f0;
+}
+.findPswdBox>form>button{
+    border:0;
+    padding:8px 15px;
+    cursor:pointer;
+    margin-top: 15px;
+    margin-right:5px;
+    background-color: #248ef0;
+    color:white;
+}
+.findPswdBox>form>button:hover{
+    background-color: #25a3ff;
+}
+.findPswdBox>form select{
+    width:100px;
+    height:42px;
+    font-size:14px;
+    border:1px solid #e6e9f0;
+    padding-left:5px;
+    margin-top: -1px;
+}
+.findPswdBox>form>.loading{
+    margin-top: 10px;
+    margin-bottom:0;
+}
+.findPswdBox>form>.idenCodeBox>input{
+    height:30px;
+    padding:5px 10px;
+    display: inline-block;
+    width:110px;
+}
+.findPswdBox>form>.idenCodeBox>input:last-child{
+    width:87px;
+    text-align: center;
+}

@@ -1,0 +1,78 @@
+.flightFormB{
+    width:100%;
+    height:auto;
+    padding:0px 15px;
+    font-size:14px;
+}
+.flightFormB>form input{
+    height:30px;
+    border:1px solid #cccccc;
+    border-left:0px;
+    padding-left:10px;
+}
+.flightFormB>form select{
+    width:145px;
+    height:30px;
+    padding-left:5px;
+}
+.flightFormB>form>div{
+    margin-top: 20px;
+}
+.flightFormB>form>.cl{
+    margin-top:0px;
+}
+.flightFormB>form>.fl{
+    margin-right: 15px;
+}
+.flightFormB>form .title{
+    height:30px;
+    line-height:30px;
+    border:1px solid #cccccc;
+    background-color: white;
+    border-right:0px;
+    padding-left:5px;
+}
+.flightFormB>form>.city{
+    width:230px;
+}
+.flightFormB>form>.city>input{
+    width:178px;
+}
+.flightFormB>form>.dateBox{
+    display: inline-block;
+    width:220px;
+    margin-right: 40px;
+}
+.flightFormB>form>.dateBox>datepicker{
+    width:150px;
+}
+.flightFormB>form>.dateBox input{
+    width: 136px;
+    font-weight:bold;
+}
+.flightFormB>form>.dateBox>.disableBox{
+     width:136px;
+     border:1px solid #cccccc;
+     color:#b6b6b6;
+     border-left:0;
+     height:30px;
+     line-height:30px;
+     padding-left:10px;
+     background-color: #f6f6f6;
+}
+.flightFormB>form>button{
+    border:0;
+    padding:10px 30px;
+    margin:20px 10px;
+    background-color: #0099CC;
+    color:white;
+    cursor:pointer;
+    -webkit-transition:  0.3s;
+    -moz-transition:  0.3s;
+    -ms-transition:  0.3s;
+    -o-transition:  0.3s;
+    transition:  0.3s;
+}
+.flightFormB>form>button:hover{
+    background-color: #00aae2;
+}

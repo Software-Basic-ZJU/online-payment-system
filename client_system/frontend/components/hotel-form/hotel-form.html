@@ -1,0 +1,55 @@
+<div class="{{!isSearch?'hotelFormA':'hotelFormB'}} fl">
+    <h2>酒店预订</h2>
+    <form>
+        <div class="city">
+            <div class="title fl">目的地</div>
+            <input type="text" ng-model="hotelForm.destination" placeholder="目的地">
+        </div>
+        <div class="dateBox">
+            <div class=" title fl">入住日期</div>
+            <datepicker date-format="yyyy-MM-dd" date-min-limit="{{today}}">
+                <input type="text" ng-model="hotelForm.checkInTime" placeholder="入住日期">
+            </datepicker>
+        </div>
+        <div  class="dateBox">
+            <div class=" title fl">退房日期</div>
+            <datepicker date-format="yyyy-MM-dd" date-min-limit="{{hotelForm.checkInTime}}">
+                <input type="text" ng-model="hotelForm.checkOutTime" placeholder="退房日期">
+            </datepicker>
+        </div>
+        <div class="fl">
+            酒店级别:
+            <select ng-model="hotelForm.star">
+                <option value="all">不限</option>
+                <option value="five">五星级/豪华</option>
+                <option value="four">四星级/高档</option>
+                <option value="three">三星级/舒适</option>
+                <option value="two">二星级以下/经济</option>
+            </select>
+        </div>
+        <div class="fl">
+            价格区间:
+            <select ng-model="hotelForm.price">
+                <option value="all">不限</option>
+                <option value="150">¥150以下</option>
+                <option value="300">¥150-¥300</option>
+                <option value="450">¥300-¥450</option>
+                <option value="600">¥450-¥600</option>
+                <option value="1000">¥600-¥1000</option>
+                <option value="max">¥1000以上</option>
+            </select>
+        </div>
+        <div class="fl">
+            得分水平:
+            <select ng-model="hotelForm.score">
+                <option value="all">不限</option>
+                <option value="4.5">不低于4.5分</option>
+                <option value="4">不低于4分</option>
+                <option value="3.5">不低于3.5分</option>
+                <option value="3">不低于3分</option>
+            </select>
+        </div>
+        <button type="submit" ng-click="hotelSearch()" class="fr">立即搜索</button>
+        <div class="cl"></div>
+    </form>
+</div>

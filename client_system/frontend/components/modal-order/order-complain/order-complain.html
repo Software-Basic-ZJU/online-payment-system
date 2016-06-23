@@ -1,0 +1,23 @@
+<div class="complainBox" ng-if="showComplain">
+    <h2>申诉</h2>
+    <div class="orderId">订单号:&nbsp;{{orderId}}</div>
+    <div class="orderContent">订单内容:&nbsp;{{orderContent}}</div>
+    <div class="selectBox">
+        <p>请选择您申诉的理由:</p>
+        <select ng-model="cmlpForm.reasonTip">
+            <option  value="default">请选择申诉理由</option>
+            <option  value="卖家未同意退款">卖家未同意退款</option>
+            <option  value="已确认收货但想要退款">已确认收货但想要退款</option>
+            <option  value="个人原因">个人原因</option>
+            <option  value="其他">其他</option>
+        </select>
+    </div>
+    <div class="reasonContent">
+        <p>请补充您申诉的理由:(必填)</p>
+        <textarea  ng-model="cmlpForm.reason"></textarea>
+    </div>
+    <div class="cl"></div>
+    <button type="submit" ng-click="complain()" ng-show="isLoaded">确认提交</button>
+    <img class="loading" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+
+</div>

@@ -1,0 +1,166 @@
+main-account .box{
+    margin-top:40px;
+    min-width:900px;
+}
+main-account .box button{
+    border:0;
+    cursor:pointer;
+    margin-left: 10px;
+}
+main-account .box>.editInfo{
+    padding:5px 12px;
+    background-color: #248ef0;
+    color:snow;
+}
+main-account .box>.editSubmit{
+    padding:5px 12px;
+    background-color: #009966;
+    color:snow;
+}
+main-account .box>.editInfo:hover{
+    background-color: #2ebcff;
+}
+main-account .box>.editSubmit:hover{
+    background-color: #00b87a;
+}
+main-account .box>div input,main-account .box>div select{
+    border-radius:5px;
+    height:30px;
+    padding:0px 5px;
+    font-size: 16px;
+    border:1px solid #999999;
+}
+main-account .box>div input:focus{
+    border:1px solid #248ef0;
+}
+main-account .topBox{
+    width:96%;
+    letter-spacing: 1px;
+    padding:30px 0px;
+    margin:0px auto;
+}
+main-account .topBox{
+    border-bottom:1px solid #dfdfdf;
+}
+main-account .topBox>.imgBox{
+    width:40%;
+    border-right:1px solid #dfdfdf;
+}
+main-account .topBox>.imgBox>img{
+    display: block;
+    width:180px;
+    height:180px;
+    border-radius: 100%;
+    margin:0px auto;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+main-account .topBox>.mainInfo{
+    width:58%;
+}
+main-account .topBox>.mainInfo>ul{
+    display: block;
+    width:80%;
+    margin:0px auto;
+    font-size: 22px;
+}
+main-account .topBox>.mainInfo>ul>li{
+    margin-top: 30px;
+}
+main-account .topBox>.mainInfo>ul>li:first-child{
+    font-size: 32px;
+}
+main-account .topBox>.mainInfo>ul>li>.money{
+    color:#ff5500;
+    max-width:20%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+main-account .topBox>.mainInfo button{
+    padding:8px 15px;
+    color:white;
+    background-color: #afafaf;
+    letter-spacing:2px;
+}
+main-account .topBox>.mainInfo button:hover{
+    background-color: #939393;
+}
+
+main-account .mainBox{
+    width:90%;
+    margin:10px auto;
+}
+main-account .mainBox>.detailInfo,main-account .mainBox>.valueInfo{
+    width:50%;
+}
+main-account .mainBox ul{
+    display: block;
+    width:80%;
+    margin:20px auto;
+    font-size:18px;
+}
+main-account .mainBox ul>li{
+    display: block;
+    margin-top: 30px;
+    word-break: break-all;
+}
+main-account .mainBox ul>.cardList>ul{
+    margin-top: 10px;
+}
+main-account .mainBox ul>.cardList li{
+    margin-top: 10px;
+}
+main-account .mainBox ul>li.pswdSafe{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+main-account .mainBox>.detailInfo>ul>li>i{
+    font-size: 24px;
+    color:#248ef0;
+    margin-left: 15px;
+}
+main-account .mainBox>.detailInfo>ul>li a{
+    text-decoration: none;
+    margin-left: 10px;
+}
+main-account .mainBox>.detailInfo>ul>li:last-child>button{
+    padding:8px 15px;
+    color:white;
+}
+main-account .mainBox>.detailInfo>ul>li>.mdfyLoginPswd{
+    background-color: #0099CC;
+}
+main-account .mainBox>.detailInfo>ul>li>.mdfyLoginPswd:hover{
+    background-color: #2daecc;
+}
+main-account .mainBox>.detailInfo>ul>li>.setPayPswd{
+    background-color: #ff5500;
+}
+main-account .mainBox>.detailInfo>ul>li>.setPayPswd:hover{
+    background-color: #ff792f;
+}
+main-account .mainBox>.detailInfo>ul>li>.mdfyPayPswd{
+    background-color: cornflowerblue;
+}
+main-account .mainBox>.detailInfo>ul>li>.mdfyPayPswd:hover{
+    background-color: #95a4f2;
+}
+main-account .mainBox>.valueInfo a{
+    margin-left: 10px;
+    font-size: 16px;
+    color:#248ef0;
+    text-decoration: none;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+}
+main-account .mainBox>.valueInfo a:hover{
+    color:#2ebcff;
+}

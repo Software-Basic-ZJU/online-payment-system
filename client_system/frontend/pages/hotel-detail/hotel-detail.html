@@ -1,0 +1,58 @@
+<hotel-detail>
+    <div class="box">
+        <img class="loading" src="../../frontend/static/img/loading.gif" ng-show="!isRoomLoaded">
+        <div class="infoBox slideIn" ng-if="isRoomLoaded">
+            <img src="../../frontend/static/img/hotel-detail.jpg" class="fl">
+            <div class="mainBox fl">
+                <div class="hotelName fl">{{hotel.hotelName}}</div>
+                <div class="star fl">{{hotel.star}}星级</div>
+                <div class="address fl" title="{{hotel.address}}">{{hotel.address}}</div>
+                <div class="score fl"><span>{{hotel.score}}</span> / 5分</div>
+            </div>
+            <div class="cl"></div>
+        </div>
+        <div class="roomBox slideIn" ng-if="isRoomLoaded">
+            <filter-tabs tabs="{{roomTabs}}"></filter-tabs>
+            <div ng-if="hasNoRes" class="noRes">没有可用的房间!</div>
+            <div class="roomList">
+                <div class="slideIn" ng-repeat="item in roomList">
+                    <div class="roomName fl">{{item.roomType}}</div>
+                    <div class="price fl">¥ {{item.price}}</div>
+                    <button type="button" ng-click="hotelBooking(item.roomId,item.roomType,item.price)">预订</button>
+                    <div class="cl"></div>
+                </div>
+            </div>
+            <paging class="fr" page="roomCurrPage" page-size="roomPageSize" total="roomTotal"
+                    show-prev-next="true"
+                    show-first-last="true"
+                    text-title-first="First hover"
+                    text-title-last="Last hover"
+                    text-title-next="Next hover"
+                    text-title-prev="Prev hover"
+                    paging-action="changeRoomPage(page)"></paging>
+        </div>
+        <div class="commentList">
+            <div class="tabs">点评</div>
+        </div>
+        <img class="loading" src="../../frontend/static/img/loading.gif" ng-show="!isCommentLoaded">
+        <div ng-if="hasNoComRes" class="noRes">没有相关评价信息!</div>
+        <div class="comItem slideIn" ng-repeat="item in commentList" ng-show="isCommentLoaded">
+            <comment-item user-name="{{item.userName}}"
+                          room-name="{{item.roomType}}"
+                          score="{{item.score}}"
+                          comment="{{item.comment}}"></comment-item>
+        </div>
+        <paging class="fr" page="comCurrPage" page-size="comPageSize" total="comTotal"
+                show-prev-next="true"
+                show-first-last="true"
+                text-title-first="First hover"
+                text-title-last="Last hover"
+                text-title-next="Next hover"
+                text-title-prev="Prev hover"
+                paging-action="changeComPage(page)"></paging>
+    </div>
+        <modal>
+            <hotel-geneorder></hotel-geneorder>
+        </modal>
+    </div>
+</hotel-detail>

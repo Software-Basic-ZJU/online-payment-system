@@ -1,0 +1,103 @@
+.detail{
+    margin-top:40px;
+    width:100%;
+}
+.detail>div{
+    width:96%;
+    margin:20px auto;
+}
+.detail button{
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+.stateBox>.currState{
+    font-size: 24px;
+    letter-spacing:2px;
+    display: inline-block;
+}
+.stateBox>.currState>.state{
+    color:#238ef0;
+}
+.stateBox>.rateBtn{
+    background-color: #238ef0;
+    color:white;
+    border:1px solid #f8fafc;
+    font-size:16px;
+    padding:5px 15px;
+    cursor:pointer;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.stateBox>.rateBtn:hover{
+    background-color: #2fb0ff;
+}
+
+.detailBox{
+    margin: 30px auto;
+    border:2px solid #ebeef5;
+}
+.detailBox>div{
+    width:96%;
+    margin:20px auto;
+}
+.detailBox>div>ul{
+    display: block;
+    width:95%;
+    margin-top: 20px;
+}
+.detailBox>div>ul>li{
+    display: inline-block;
+    margin-right: 15%;
+    max-width:20%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.detailBox>.tag{
+    display: block;
+    width:120px;
+    height:40px;
+    line-height:40px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #ebeef5;
+}
+.detailBox>.goodsInfo{
+    border-bottom:1px solid #d3d3d3;
+    padding-bottom:30px;
+}
+.detailBox>.priceBox{
+    float:right;
+    width:200px;
+    height:40px;
+    line-height:40px;
+    text-align: center;
+    font-size:22px;
+    margin-right: 20px;
+}
+.detailBox>.priceBox>.price{
+    color:#ff5500;
+    font-size: 22px;
+}
+.detailBox>.btnBox{
+    float:right;
+    width:auto;
+    height:40px;
+    line-height:40px;
+    margin-top:20px;
+}
+.detailBox>.btnBox>button{
+    padding:10px 15px;
+    border:0;
+    font-size:16px;
+    color:white;
+    background-color: #238ef0;
+    cursor:pointer;
+    margin-left:10px;
+}
+.detailBox>.btnBox>button:hover{
+    background-color: #2ebcff;
+}

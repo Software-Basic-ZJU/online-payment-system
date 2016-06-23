@@ -1,0 +1,14 @@
+<div class="hotelDsitem">
+    <div class="infoBox fl">
+        <div class="hotelName">{{hotelName}}</div>
+        <div class="star">{{star}} 星级</div>
+        <div>{{roomType}}</div>
+        <div class="hotelAddress">{{address}}</div>
+        <div>
+            {{discRate}} 折&nbsp;&nbsp;
+            <span class="discPrice">现价:{{discPrice}}¥</span>
+        </div>
+    </div>
+    <button type="button" class="fl" ng-click="dRoomBook(roomId,roomType,discPrice)">马上预订</button>
+    <div class="cl"></div>
+</div>

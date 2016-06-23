@@ -1,0 +1,77 @@
+<main-account>
+    <div class="header">
+        <div class="navBox">
+            <div class="tagBtn tagTitle" ui-sref="main.account"><i class="iconfont">&#xe603;</i>个人账户</div>
+        </div>
+    </div>
+    <img ng-src="../../frontend/static/img/loading.gif" class="loading" ng-show="!isLoaded" />
+    <div class="box" ng-if="isLoaded">
+        <button class="editInfo fr" ng-click="goModal('FindPswd')">找回密码</button>
+        <button class="editInfo fr" ng-show="!isEdit" ng-click="edit()">编辑资料</button>
+        <button class="editSubmit fr" ng-show="isEdit" ng-click="editSubmit()">确认修改</button>
+        <div class="topBox">
+            <div class="imgBox fl">
+                <img src="../../frontend/static/img/testImg.jpg">
+            </div>
+            <div class="mainInfo fl">
+                <ul>
+                    <li>您好,&nbsp;{{personInfo.userName}}</li>
+                    <li>余额：<span class="money" title="{{personInfo.balance}}">{{personInfo.balance}}</span>
+                        <button ng-click="goModal('Cash')">提现</button>
+                        <button ng-click="goModal('Recharge')">充值</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="cl"></div>
+        </div>
+        <div class="mainBox">
+            <div class="detailInfo fl">
+                <ul>
+                    <li>真实姓名：{{personInfo.realName}}<a href="" ng-if="personInfo.notIden" ng-click="goModal('NameVerify')">Go</a>
+                        <i class="iconfont" title="已实名认证" ng-if="personInfo.idenState">&#xe60e;</i>
+                    </li>
+                    <li>性别：<span ng-show="!isEdit">{{personInfo.gender=='M'?'男':'女'}}</span>
+                        <select ng-model="personInfo.gender" ng-show="isEdit">
+                            <option value="M">男</option>
+                            <option value="F">女</option>
+                        </select>
+                    </li>
+                    <li>联系电话：<span ng-show="!isEdit">{{personInfo.phone}}</span>
+                        <input type="text" ng-model="personInfo.phone" ng-show="isEdit">
+                    </li>
+                    <li>电子邮箱：<span>{{personInfo.email}}</span>
+                    </li>
+                    <li class="pswdSafe">密码安全:
+                        <button type="button" class="mdfyLoginPswd" ng-click="goModal('MdfyPswd')">修改登录密码</button>
+                        <button type="button" class="setPayPswd" ng-if="!isSetPay" ng-click="goModal('SetPay')">设置支付密码</button>
+                        <button type="button" class="mdfyPayPswd" ng-if="isSetPay" ng-click="goModal('MdfyPay')">修改支付密码</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="valueInfo fl">
+                <ul>
+                    <li>用户类型：<span>{{personInfo.userType==1?'普通用户':'商家'}}</span></li>
+                    <li>VIP等级：<span>{{personInfo.level}}</span></li>
+                    <li>经验：<span>{{personInfo.exp}}</span></li>
+                    <li class="cardList">绑定银行卡：<a href="" ng-click="goModal('BindCard')">绑定银行卡</a>
+                    <ul>
+                        <li ng-repeat="item in personInfo.cardList">[{{item}}]&nbsp;&nbsp;
+                        </li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="cl"></div>
+        </div>
+    </div>
+    <modal>
+        <account-cash></account-cash>
+        <account-recharge></account-recharge>
+        <account-bindcard></account-bindcard>
+        <account-nmverify></account-nmverify>
+        <home-findpswd></home-findpswd>
+        <mdfy-pswd></mdfy-pswd>
+        <mdfy-pay></mdfy-pay>
+        <set-pay></set-pay>
+    </modal>
+</main-account>

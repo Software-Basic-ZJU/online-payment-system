@@ -1,0 +1,38 @@
+.complainBox>.orderId,.complainBox>.orderContent{
+    width:250px;
+    margin-top: 10px;
+}
+.complainBox>.selectBox{
+    width:200px;
+    margin-top: 10px;
+    padding-right:10px;
+    margin-right: 10px;
+}
+.complainBox>.selectBox>p{
+    color:#3e3e3e;
+}
+.complainBox>.selectBox>select{
+    display: block;
+    margin-top: 5px;
+    height:24px;
+}
+.complainBox>.reasonContent>p{
+    margin: 10px 0px;
+}
+.complainBox>.reasonContent>textarea{
+    padding:5px;
+    width:250px;
+    height:120px;
+}
+.complainBox>button{
+    display: block;
+    margin-top: 10px;
+    border:0px;
+    padding:8px 15px;
+    color:white;
+    background-color: #238ef0;
+    cursor:pointer;
+}
+.complainBox>button:hover{
+    background-color: #2ebcff;
+}

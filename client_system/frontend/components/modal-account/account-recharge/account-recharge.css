@@ -1,0 +1,38 @@
+.rechargeBox>form{
+    width:250px;
+}
+.rechargeBox>form>select{
+    width:auto;
+    height:30px;
+    margin-top:10px;
+}
+.rechargeBox>form>div{
+    font-size:14px;
+    margin-top: 10px;
+}
+.rechargeBox>form>div>input{
+    width:240px;
+    height:30px;
+    padding-left:5px;
+    margin-top:5px;
+}
+.rechargeBox>form>.idenCodeBox>input{
+    display: inline-block;
+    width:140px;
+}
+.rechargeBox>form>.idenCodeBox>input:last-child{
+    width:87px;
+    text-align: center;
+}
+.rechargeBox>form>button{
+    margin-top:10px;
+    border:0;
+    padding:8px 15px;
+    letter-spacing: 2px;
+    color:white;
+    background-color: #248ef0;
+    cursor:pointer;
+}
+.rechargeBox>form>button:hover{
+    background-color: #2ebcff;
+}

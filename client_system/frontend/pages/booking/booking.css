@@ -1,0 +1,75 @@
+booking{
+    display: block;
+    width:100%;
+    min-width:1100px;
+}
+booking .navbar{
+    position: fixed;
+    top:0;
+    width:100%;
+    min-width:1200px;
+    height:50px;
+    background-color: #ebeef5;
+    opacity:0.95;
+}
+
+booking .navbar>ul{
+    font-size: 18px;
+}
+booking .navbar>ul>li>i{
+    font-size:20px;
+    margin-right: 10px;
+}
+booking .navbar>ul>li{
+    display: block;
+    float:left;
+    padding:0px 30px;
+    text-align: center;
+    height:50px;
+    line-height: 50px;
+    cursor:pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+booking .navbar>ul>li:first-child{
+    border-right:2px solid #f8fafc;
+    font-size:16px;
+}
+booking .navbar>ul>li:hover{
+    background-color: #f8fafc;
+}
+
+/* global */
+booking .box{
+    width:90%;
+    max-width:1600px;
+    margin:0px auto;
+}
+booking input{
+    border:1px solid #8a8a8a;
+}
+booking input:focus{
+    border:1px solid #0099CC;
+}
+booking .pagination li.active{
+    background-color: #0099CC;
+}
+booking .pagination li.active a{
+    color:snow;
+}
+booking .pagination li:hover{
+    background-color: #eeeeee;
+}
+booking .pagination li.active:hover{
+    background-color: #0099CC;
+}
+booking .pagination li a{
+    font-size:14px;
+    display: block;
+    padding:5px 13px;
+    text-decoration: none;
+    color:#0099CC;
+}

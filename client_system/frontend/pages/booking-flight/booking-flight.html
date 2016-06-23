@@ -1,0 +1,63 @@
+<booking-flight>
+    <div class="searchBox slideIn" ng-if="!isSearch">
+        <flight-form></flight-form>
+    </div>
+    <div class="topBox" ng-if="isSearch">
+        <div class="box">
+            <flight-form></flight-form>
+        </div>
+    </div>
+    <div class="box" ng-if="isSearch">
+        <div class="container">
+            <div class="flightList fl">
+                <filter-tabs parent="Flight" tabs="{{flightTabs}}" icon="&#xe615;" >
+                    <select ng-model="transfer" ng-change="changeStop(transfer)">
+                        <option value="all">不限</option>
+                        <option value="0">不中转</option>
+                    </select>
+                </filter-tabs>
+                <img class="loading" src="../../frontend/static/img/loading.gif" ng-show="!isListLoaded">
+                <div ng-if="hasNoRes" class="noRes">没有相关结果!</div>
+                <div class="slideIn" ng-repeat="item in flightList">
+                    <flight-item goods-id="{{item.flightId}}"
+                                 date="{{item.date}}"
+                                 from-city="{{item.fromCity}}"
+                                 to-city="{{item.toCity}}"
+                                 from-port="{{item.fromPort}}"
+                                 to-port="{{item.toPort}}"
+                                 leave-time="{{item.leaveTime}}"
+                                 reach-time="{{item.reachTime}}"
+                                 company="{{item.airlineName}}"
+                                 price="{{item.price}}"
+                                 flight-id="{{item.flightNumber}}"
+                                 ></flight-item>
+                </div>
+                <paging class="fr" page="currPage" page-size="pageSize" total="total"
+                        show-prev-next="true"
+                        show-first-last="true"
+                        text-title-first="First hover"
+                        text-title-last="Last hover"
+                        text-title-next="Next hover"
+                        text-title-prev="Prev hover"
+                        paging-action="changePage(page)"></paging>
+            </div>
+            <div class="rightBox fl">
+               <div class="recomBox">
+                   <div class="title">特价机票</div>
+                   <img class="loading" src="../../frontend/static/img/loading.gif" ng-show="!isRecomLoaded">
+                   <div ng-if="hasRecomNoRes" class="noRes">没有相关结果!</div>
+                   <div class="slideIn" ng-repeat="item in recomFlightList">
+                        <flight-dsitem goods-id="{{item.flightId}}"
+                                       company="{{item.airlineName}}"
+                                       leave-time="{{item.leaveTime}}"
+                                       reach-time="{{item.reachTime}}"
+                                       disc-rate="{{item.userDiscount/10}}"
+                                       disc-price="{{item.price*item.userDiscount/100}}"
+                                        flight_id="{{item.flightNumber}}"></flight-dsitem>
+                    </div>
+                </div>
+            </div>
+            <div class="cl"></div>
+        </div>
+    </div>
+</booking-flight>

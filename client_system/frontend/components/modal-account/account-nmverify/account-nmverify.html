@@ -1,0 +1,13 @@
+<div class="verifyBox" ng-if="showNameVerify">
+    <h2>实名认证</h2>
+    <form>
+        <div>
+            身份证号:<input type="text" ng-model="verifyForm.certiId" placeholder="身份证号">
+        </div>
+        <div>
+            真实姓名:<input type="text" ng-model="verifyForm.name" placeholder="真实姓名">
+        </div>
+        <button type="submit" class="fr" ng-click="goVerify()" ng-show="isLoaded">认证</button>
+        <img class="loading fr" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+    </form>
+</div>

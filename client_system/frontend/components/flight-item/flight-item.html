@@ -1,0 +1,23 @@
+<div class="flightItem">
+    <div class="infoBox fl">
+        <div class="company">{{company}}</div>
+        <div class="flightId" title="{{flightId}}">{{flightId}}</div>
+        <div class="date" title="{{date}}">{{date}}</div>
+    </div>
+    <div class="flightBox fl">
+        <div class="iconBox cl">
+            <i class="iconfont">&#xe612;</i>
+        </div>
+        <div class="fromBox fl">
+            <div class="leaveTime"><strong>{{leaveTime}}</strong></div>
+            <div class="fromPort">{{fromPort}}</div>
+        </div>
+        <div class="toBox fr">
+            <div class="reachTime"><strong>{{reachTime}}</strong></div>
+            <div class="toPort">{{toPort}}</div>
+        </div>
+    </div>
+    <div class="price fr" title="{{price}}">¥ {{price}}</div>
+    <button type="button" class="fr" ng-click="flightDetail(goodsId)">马上订票</button>
+    <div class="cl"></div>
+</div>

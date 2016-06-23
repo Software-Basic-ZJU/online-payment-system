@@ -1,0 +1,11 @@
+<div class="mainAside">
+    <div class="asideHeader">
+        <div class="logo" ui-sref="main"><i class="iconfont">&#xe604;</i>在线支付系统</div>
+    </div>
+    <ul class="aside">
+        <li ui-sref="main.account" ng-class="{active:state==='account'}"><i class="iconfont">&#xe603;</i>个人账户</li>
+        <li ui-sref="main.order" ng-class="{active:state==='order'||state==='orderDetail'}"><i class="iconfont">&#xe601;</i>订单交易</li>
+        <li ui-sref="main.booking" ng-class="{active:state==='booking'}"><i class="iconfont">&#xe605;</i>增值服务</li>
+        <li ng-click="logout()">登出</li>
+    </ul>
+</div>

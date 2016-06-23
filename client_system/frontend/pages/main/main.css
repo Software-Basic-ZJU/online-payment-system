@@ -1,0 +1,52 @@
+main{
+    width:100%;
+}
+main .box{
+    max-width:1400px;
+    margin:0px auto;
+    width:96%;
+    min-width:860px;
+}
+main .mainPage{
+    margin-left: 250px;
+    height:100vh;
+    overflow-y: auto;
+}
+main .mainPage>div>.ng-scope>div:nth-child(2){
+    padding:20px;
+}
+main .header{
+    width:100%;
+    min-width:900px;
+    background-color: #f8fafc;
+    height:50px;
+    border-bottom:1px solid #e6e9f0;
+}
+main .header>.navBox>.tagBtn{
+    float:left;
+    padding:0px 20px;
+    height:50px;
+    line-height:50px;
+    text-align: center;
+    cursor:pointer;
+    outline:none;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+main .header>.navBox>.tagBtn:hover{
+    background-color: #edf4fc;
+}
+main .header>.navBox>.tagBtn>i{
+    margin-right: 10px;
+    font-size: 20px;
+}
+main .header>.navBox>.backBtn>i{
+    font-size:24px;
+    margin-right: 0px;
+}
+main .header>.navBox>.tagTitle{
+    border-right:1px solid #e6e9f0;
+}

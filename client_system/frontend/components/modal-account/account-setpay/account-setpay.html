@@ -1,0 +1,16 @@
+<div class="setPay" ng-if="showSetPay">
+    <h2>设置支付密码</h2>
+    <form>
+        <div>
+            登录密码:<input type="password" placeholder="登录密码" ng-model="setPayForm.loginPswd">
+        </div>
+        <div>
+            支付密码:<input type="password" placeholder="支付密码" ng-model="setPayForm.newPswd">
+        </div>
+        <div>
+            确认密码:<input type="password" placeholder="确认密码" ng-model="setPayForm.confirmNew">
+        </div>
+        <button type="submit" class="fr" ng-click="goSetPay()" ng-show="isLoaded">确认修改</button>
+        <img class="loading fr" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+    </form>
+</div>

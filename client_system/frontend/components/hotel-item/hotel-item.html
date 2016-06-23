@@ -1,0 +1,15 @@
+<div class="hotelItem">
+    <div class="leftBox fl">
+        <div class="hotelName fl" title="{{name}}">{{name}}</div>
+        <div class="hotelStar fl">{{star}} 星级</div>
+        <div class="hotelScore fl"><span>{{score}}</span> / 5</div>
+        <span class="cl"></span>
+        <div class="hotelAddress fl" title="{{address}}">{{address}}</div>
+        <div class="hotelReply fl" title="{{replyNum}}&nbsp;条点评"><a href="" ng-click="hotelDetail(hotelId)">{{replyNum}}&nbsp;条点评</a></div>
+    </div>
+    <div class="rightBox fl">
+        <div class="price fl" title="{{price}}¥ 起">{{price}}¥ 起</div>
+        <button type="button" class="fl" ng-click="hotelDetail(hotelId)">查看房型</button>
+    </div>
+    <div class="cl"></div>
+</div>

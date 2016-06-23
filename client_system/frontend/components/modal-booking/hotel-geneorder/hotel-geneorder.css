@@ -1,0 +1,59 @@
+.hotelOrder{
+    width:400px;
+}
+.hotelOrder>.title{
+    font-size:24px;
+    padding-bottom:10px;
+    border-bottom: 1px solid #c8c8c8;
+}
+.hotelOrder>.notice{
+    font-size:12px;
+}
+.hotelOrder>div{
+    margin-top:10px;
+}
+.hotelOrder>.infoBox>.roomType{
+    margin-left: 20px;
+}
+.hotelOrder>.numBox>select{
+    margin-left: 20px;
+    width:60px;
+    padding-left:10px;
+    height:30px;
+}
+.hotelOrder>.nameList>.nameBox{
+    margin-top: 5px;
+    padding-left:25px;
+}
+.hotelOrder>.nameList>.nameBox>input{
+    margin-left:18px;
+    padding:5px;
+}
+.hotelOrder>.phone>input{
+    margin-left:20px;
+    padding:5px;
+}
+.hotelOrder>button{
+    margin-top: 20px;
+    padding:8px 20px;
+    border:0;
+    background-color: #ff9113;
+    color:white;
+    cursor:pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.hotelOrder>button:hover{
+    background-color: #ff9f2c;
+}
+.hotelOrder>.totalPrice{
+    margin-top: 15px;
+    font-size:18px;
+}
+.hotelOrder>.totalPrice>.total{
+    color:#ff5555;
+    font-size:28px;
+}

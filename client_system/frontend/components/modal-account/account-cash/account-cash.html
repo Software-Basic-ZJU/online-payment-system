@@ -1,0 +1,22 @@
+<div class="getCashBox" ng-if="showCash">
+    <h2>提现</h2>
+    <form>
+        支付方式：
+        <select ng-model="cashForm.cardId">
+            <option  ng-repeat="cardId in cards"
+                     value="{{cardId}}">{{cardId}}</option>
+        </select>
+        <div>
+            提现金额:<input type="text" ng-model="cashForm.money" placeholder="提现金额">
+        </div>
+        <div>
+            交易密码:<input type="password" ng-model="cashForm.pswd" placeholder="交易密码">
+        </div>
+        <div class="idenCodeBox">
+            验证码:<br><input type="text" ng-model="cashForm.idenCode" placeholder="验证码">
+            <input type="text" class="idenCode" value="123456" readonly>
+        </div>
+        <button type="submit" class="fr" ng-click="goGetCash()" ng-show="isLoaded">提现</button>
+        <img class="loading fr" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+    </form>
+</div>

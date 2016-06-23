@@ -1,0 +1,75 @@
+<main-order>
+    <div class="header">
+        <div class="navBox">
+            <div class="tagBtn tagTitle" ui-sref="main.order"><i class="iconfont">&#xe601;</i>订单记录</div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="orderChoice">
+            <div class="titleBox">
+                <span class="title">订单记录</span>
+                <ul class="timeChoice">
+                    <li ng-class="{active:choiceTime==0}" ng-click="changeTime(0)">全部</li>
+                    <li ng-class="{active:choiceTime==1}" ng-click="changeTime(1)">今天</li>
+                    <li ng-class="{active:choiceTime==2}" ng-click="changeTime(2)">1周内</li>
+                    <li ng-class="{active:choiceTime==3}" ng-click="changeTime(3)">1个月内</li>
+                    <li ng-class="{active:choiceTime==4}" ng-click="changeTime(4)">3个月内</li>
+                    <li ng-class="{active:choiceTime==5}" ng-click="changeTime(5)">1年内</li>
+                    <li ng-class="{active:choiceTime==6}" ng-click="changeTime(6)">1年以前</li>
+                </ul>
+                <ul class="stateChoice">
+                    <li ng-class="{active:choiceState==0}" ng-click="changeState(0)">全部</li>
+                    <li ng-class="{active:choiceState==1}" ng-click="changeState(1)">进行中</li>
+                    <li ng-class="{active:choiceState==2}" ng-click="changeState(2)">未支付</li>
+                    <li ng-class="{active:choiceState==3}" ng-click="changeState(3)">等待发货</li>
+                    <li ng-class="{active:choiceState==4}" ng-click="changeState(4)">未确认收货</li>
+                    <li ng-class="{active:choiceState==5}" ng-click="changeState(5)">已退款</li>
+                    <li ng-class="{active:choiceState==6}" ng-click="changeState(6)">成功</li>
+                    <li ng-class="{active:choiceState==7}" ng-click="changeState(7)">失败</li>
+                </ul>
+            </div>
+        </div>
+        <div class="orderList">
+            <table>
+                <thead>
+                <tr>
+                    <th class="content">订单内容</th>
+                    <th class="price">单价（元）</th>
+                    <th class="amount">数量</th>
+                    <th class="state">交易状态</th>
+                    <th class="action">交易操作</th>
+                </tr>
+                </thead>
+            </table>
+            <img ng-src="../../frontend/static/img/loading.gif" class="loading" ng-show="!isLoaded" />
+            <div class="noRes" ng-show="hasNoRes">您还没有订单哦!</div>
+            <div class="slideIn" ng-repeat="item in orders">
+                <order-item time="{{item.action_time}}"
+                            state="{{item.stateName}}"
+                            price="{{item.price}}"
+                            amount="{{item.amount}}"
+                            order-id="{{item.order_id}}"
+                            content="{{item.orderContent}}"
+                            buyer="{{item.buyer}}"></order-item>
+            </div>
+
+        </div>
+        <paging class="fr" page="currPage" page-size="pageSize" total="total"
+                show-prev-next="true"
+                show-first-last="true"
+                text-title-first="First hover"
+                text-title-last="Last hover"
+                text-title-next="Next hover"
+                text-title-prev="Prev hover"
+                paging-action="changePage(page)"
+                text-title></paging>
+        <modal>
+            <order-pay></order-pay>
+            <order-refund></order-refund>
+            <order-cancel></order-cancel>
+            <order-confirm></order-confirm>
+            <order-complain></order-complain>
+            <order-reply></order-reply>
+        </modal>
+    </div>
+</main-order>

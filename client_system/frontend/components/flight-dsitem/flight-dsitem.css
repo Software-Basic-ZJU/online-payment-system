@@ -1,0 +1,59 @@
+.flightDsitem{
+    padding:20px 10px;
+    border-left:1px solid transparent;
+    border-bottom:1px solid #e1eaec;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.flightDsitem:hover{
+    border-left:1px solid #0099CC;
+    background-color: #f6fdff;
+}
+.flightDsitem>.fl{
+    height:60px;
+    text-align: center;
+}
+.flightDsitem>.fl:first-child{
+    width:25%;
+}
+.flightDsitem .company{
+    padding-top:5px;
+}
+.flightDsitem .flightId{
+    padding-top:5px;
+}
+.flightDsitem>.timeBox{
+    width:30%;
+    color:#0099CC;
+}
+.flightDsitem>.discPrice{
+    width:20%;
+    line-height:50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color:#ff440a;
+}
+.flightDsitem>.discRate{
+    width:11%;
+    padding-top:10px;
+}
+.flightDsitem>button{
+    font-size:14px;
+    border:0;
+    background-color: transparent;
+    padding:0 5px;
+    height:50px;
+    cursor:pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.flightDsitem>button:hover{
+    color:#0099CC;
+}

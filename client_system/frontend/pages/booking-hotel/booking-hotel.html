@@ -1,0 +1,57 @@
+<booking-hotel>
+    <div class="searchBox slideIn" ng-if="!isSearch">
+        <hotel-form></hotel-form>
+    </div>
+    <div class="box"  ng-if="isSearch" >
+        <hotel-form></hotel-form>
+        <div class="container">
+            <div class="con">
+                <div class="hotelList fl">
+                    <filter-tabs parent="Hotel" tabs="{{hotelTabs}}" icon="&#xe615;"></filter-tabs>
+                    <img class="loading" src="../../frontend/static/img/loading.gif" ng-show="!isListLoaded">
+                    <div ng-if="hasNoRes" class="noRes">没有相关结果!</div>
+                    <div class="slideIn" ng-repeat="item in hotelList">
+                        <hotel-item hotel-id="{{item.hotelId}}"
+                                    name="{{item.hotelName}}"
+                                    star="{{item.star}}"
+                                    score="{{item.score}}"
+                                    address="{{item.address}}"
+                                    reply-num="{{item.replyNum}}"
+                                    price="{{item.lowestPrice}}"></hotel-item>
+                    </div>
+                    <paging class="fr" page="currPage" page-size="pageSize" total="total"
+                            show-prev-next="true"
+                            show-first-last="true"
+                            text-title-first="First hover"
+                            text-title-last="Last hover"
+                            text-title-next="Next hover"
+                            text-title-prev="Prev hover"
+                            paging-action="changePage(page)"></paging>
+                </div>
+                <div class="recomBox fl">
+                    <div>特价酒店</div>
+                    <img class="loading" src="../../frontend/static/img/loading.gif" ng-show="!isRecomLoaded">
+                    <div ng-if="recomHasNoRes" class="noRes">没有相关结果!</div>
+                    <div class="recomList">
+                        <div class="slideIn" ng-repeat="item in recomHotelList">
+                            <hotel-dsitem room-id="{{item.roomId}}"
+                                          hotel-name="{{item.hotelName}}"
+                                          star="{{item.star}}"
+                                          room-type="{{item.roomType}}"
+                                          score="{{item.score}}"
+                                          address="{{item.address}}"
+                                          disc-rate="{{item.userDiscount/10}}"
+                                          disc-price="{{item.nowPrice}}">
+                            </hotel-dsitem>
+                        </div>
+                    </div>
+                </div>
+                <div class="cl"></div>
+            </div>
+        </div>
+        <modal>
+            <hotel-geneorder></hotel-geneorder>
+        </modal>
+    </div>
+
+</booking-hotel>

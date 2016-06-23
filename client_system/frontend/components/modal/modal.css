@@ -1,0 +1,41 @@
+.modalBox{
+    position: fixed;
+    left:50%;
+    top:50%;
+    z-index:5;
+    margin-top:-200px;
+    margin-left:-150px;
+    padding:20px 20px;
+    padding-bottom:30px;
+    background-color:#ebeef5;
+}
+.modalBox .loading{
+    margin-top: 10px;
+    margin-bottom:0;
+}
+.modal>.shelter{
+    position: fixed;
+    margin:0;
+    top:0;
+    left:0;
+    width:100%;
+    min-height:100%;
+    z-index: 4;
+    opacity:0.6;
+    background-color: black;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    -ms-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+}
+.modal.ng-hide>.shelter{
+    opacity:0;
+}
+.ng-show{
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    -ms-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+}

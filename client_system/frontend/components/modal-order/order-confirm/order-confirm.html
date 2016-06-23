@@ -1,0 +1,11 @@
+<div class="confirmBox" ng-if="showConfirm">
+    <h2>确认收货</h2>
+    <div class="orderId">订单号:&nbsp;{{orderId}}</div>
+    <div class="orderContent">订单内容:&nbsp;{{orderContent}}</div>
+    <div class="notice">确认后钱将打给对方,无法退还了哦~:-D</div>
+    <form>
+        <input type="password" ng-model="confirm.payPswd" placeholder="支付密码">
+        <button type="submit" ng-click="confirm()" ng-show="isLoaded">确认收货</button>
+        <img class="loading" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+    </form>
+</div>

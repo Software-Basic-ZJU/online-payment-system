@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "main": "index.js",
+  "authors": [
+    "yyh <234347589@qq.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-flash-alert": "^2.3.0",
+    "angular-paging": "^2.2.2",
+    "angularjs-datepicker": "^2.1.4",
+    "oclazyload": "ocLazyLoad#^1.0.9"
+  }
+}

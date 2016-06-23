@@ -1,0 +1,18 @@
+<div class="replyBox" ng-if="showReply">
+    <img class="loading" src="../../frontend/static/img/loading.gif" ng-if="!isCheckLoaded">
+    <div ng-if="noReplied">
+        <h2>评价</h2>
+        <div class="orderId">订单号:&nbsp;{{orderId}}</div>
+        <div class="orderContent">订单内容:&nbsp;{{orderContent}}</div>
+        <form>
+            <div class="scoreBox">请打分:<star-picker star-num="reply.score"></star-picker></div>
+            评价内容:<textarea ng-model="reply.content"></textarea>
+            <button type="submit" ng-click="submitReply()" ng-show="isLoaded">提交评价</button>
+            <img class="loading" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+        </form>
+    </div>
+    <div ng-if="hasReplied" class="repliedBox">
+        <div class="hasReplied">已经评价过啦!</div>
+        <div>╰(*°▽°*)╯</div>
+    </div>
+</div>

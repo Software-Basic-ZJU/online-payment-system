@@ -1,0 +1,59 @@
+<order-detail>
+    <div class="header">
+        <div class="navBox">
+            <div class="tagBtn tagTitle" ui-sref="main.order"><i class="iconfont">&#xe601;</i>订单记录</div>
+            <div class="tagBtn backBtn" ng-click="goBack()"><i class="iconfont">&#xe607;</i></div>
+        </div>
+    </div>
+    <img ng-src="../../frontend/static/img/loading.gif" class="loading" ng-show="!isLoaded" />
+    <div class="detail box slideIn" ng-if="isLoaded">
+        <div class="stateBox">
+            <div class="currState">当前订单交易状态:&nbsp;<span class="state">{{orderInfo.stateName}}</span></div>
+            <button class="rateBtn" ng-if="isSuccess" ng-click="goModal('Reply',orderInfo.orderId,orderInfo.orderContent)">评价</button>
+        </div>
+        <div class="detailBox">
+            <span class="tag">订单详情</span>
+            <div class="goodsInfo">
+                <h4>订单信息</h4>
+                <div class="detailInfo" title="{{orderInfo.orderContent}}">{{orderInfo.orderContent}}</div>
+                <ul>
+                    <li title="{{orderInfo.orderId}}">订单编号：{{orderInfo.orderId}}</li>
+                    <li title="{{orderInfo.goodsId}}">商品编号：{{orderInfo.goodsId}}</li>
+                </ul>
+                <ul>
+                    <li>创建时间：{{orderInfo.startTime}}</li>
+                    <li>付款时间：{{orderInfo.payTime}}</li>
+                    <li>关闭时间：{{orderInfo.closeTime}}</li>
+                </ul>
+            </div>
+            <div class="sellerInfo">
+                <h4>卖家信息</h4>
+                <ul>
+                    <li>用户名: {{sellInfo.userName}}</li>
+                    <li>真实姓名: {{sellInfo.name}}</li>
+                </ul>
+                <ul>
+                    <li>电子邮箱: {{sellInfo.email}}</li>
+                    <li>联系电话: {{sellInfo.phone}}</li>
+                </ul>
+            </div>
+            <div class="priceBox">实付款:&nbsp;<strong class="price">{{orderInfo.price}}</strong>元</div>
+            <div class="btnBox">
+                <button class="deleteOrderBtn" ng-if="isNonPay&&!isCompleted" ng-click="goModal('Cancel',orderInfo.orderId,orderInfo.orderContent)">取消订单</button>
+                <button class="goPayBtn" ng-if="isNonPay&&!isCompleted" ng-click="goModal('Pay',orderInfo.orderId,orderInfo.orderContent)">去支付</button>
+                <button class="complainBtn" ng-if="!isNonPay&&!isCompleted" ng-click="goModal('Complain',orderInfo.orderId,orderInfo.orderContent)">申诉</button>
+                <button class="refundBtn" ng-if="!isNonPay&&!isCompleted" ng-click="goModal('Refund',orderInfo.orderId,orderInfo.orderContent)">退款</button>
+                <button class="confirmBtn" ng-if="!isNonPay&&!isCompleted" ng-click="goModal('Confirm',orderInfo.orderId,orderInfo.orderContent)">确认收货</button>
+            </div>
+            <div class="cl"></div>
+        </div>
+    </div>
+    <modal>
+        <order-pay></order-pay>
+        <order-refund></order-refund>
+        <order-cancel></order-cancel>
+        <order-complain></order-complain>
+        <order-confirm></order-confirm>
+        <order-reply></order-reply>
+    </modal>
+</order-detail>

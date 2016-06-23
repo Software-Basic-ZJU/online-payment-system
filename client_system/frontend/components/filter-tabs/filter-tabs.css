@@ -1,0 +1,26 @@
+.filterTabs{
+    height:50px;
+    border:1px solid #0099CC;
+    border-bottom:0;
+    background-color: #f6fdff;
+}
+.filterTabs>button{
+    border:0;
+    font-size:16px;
+    border-right:1px solid white;
+    height:50px;
+    padding:0px 25px;
+    color:white;
+    background-color: #0099CC;
+    cursor:pointer;
+}
+.filterTabs>button>i{
+    margin-left: 5px;
+}
+.filterTabs>button:last-child{
+    border-right:1px solid #0099CC;
+}
+.filterTabs>button.active{
+    background-color: white;
+    color:#0099CC;
+}

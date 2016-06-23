@@ -1,0 +1,38 @@
+.mainAside{
+    float:left;
+    width:250px;
+    background-color: #ebeef5;
+    border-right:1px solid #eeeeee;
+    height:100vh;
+}
+.mainAside>.asideHeader{
+    height:100px;
+    line-height: 100px;
+    background-color: #ebeef5;
+    color: #238ef0;
+}
+.mainAside>.asideHeader>.logo{
+    font-size:24px;
+    cursor:pointer;
+}
+.mainAside>.asideHeader>.logo>i{
+    margin-left: 15px;
+    font-size: 52px;
+    margin-right: 15px;
+}
+.mainAside>.aside>li{
+    width:100%;
+    height:100px;
+    line-height:100px;
+    text-align: center;
+    cursor:pointer;
+    color:#525866;
+}
+.mainAside>.aside>li>i{
+    font-size:28px;
+    margin-right: 10px;
+}
+.mainAside>.aside>li.active{
+    background-color:white;
+    border-right:1px solid white;
+}

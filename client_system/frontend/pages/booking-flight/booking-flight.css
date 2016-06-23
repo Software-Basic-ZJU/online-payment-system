@@ -1,0 +1,77 @@
+booking-flight .box{
+    margin-top:20px;
+    margin-bottom:80px;
+    width:1200px;
+}
+booking-flight .searchBox{
+    width:100%;
+    height:100vh;
+    background: url("../../static/img/flight-background.jpg") center no-repeat;
+    background-size:cover;
+}
+booking-flight .container .noRes{
+    margin-top: 40px;
+    text-align: center;
+    font-size:24px;
+}
+booking-flight .topBox{
+    width:100%;
+    margin-top: 50px;
+    background-color: #f6fdff;
+}
+booking-flight .topBox>.box{
+    margin-bottom: 30px;
+}
+booking-flight .container{
+    width:100%;
+}
+booking-flight .container>.flightList{
+    width:800px;
+}
+booking-flight .container>.flightList>filter-tabs select{
+    display: inline-block;
+    border:0;
+    height:50px;
+    padding:0px 10px;
+    font-size:16px;
+    color:white;
+    background-color: #0099CC;
+    margin-left: -5px;
+}
+booking-flight .container>.flightList>.loading{
+    margin:40px auto;
+    width:40px;
+    height:40px;
+}
+booking-flight .container>.rightBox{
+    margin-left: 20px;
+    width:30%;
+}
+booking-flight .container>.rightBox>.recomBox{
+    height:auto;
+}
+booking-flight .container>.rightBox .title{
+    width:120px;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    color:white;
+    background-color: #0099CC;
+}
+booking-flight .container>.rightBox>.recomBox>.recomList{
+    border-left:1px solid #0099cc;
+}
+booking-flight .container>.rightBox>.companyBox{
+    margin-top: 30px;
+    padding:10px 0px;
+}
+booking-flight .container>.rightBox>.companyBox>.checkItem{
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size:18px;
+}
+booking-flight .container>.rightBox>.companyBox input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    margin-right: 20px;
+}

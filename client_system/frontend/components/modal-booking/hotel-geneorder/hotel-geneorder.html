@@ -1,0 +1,34 @@
+<div class="hotelOrder" ng-if="showHotelOrder">
+    <div class="title">预订信息</div>
+    <div class="infoBox">
+        房间信息
+        <span class="roomType">{{roomName}}</span>
+    </div>
+    <div class="numBox">
+        房间数量
+        <select ng-model="hotelOrder.roomNum">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+    <div class="title">入住信息</div>
+    <div class="notice">每间房只需填写1人姓名。</div>
+    <div class="nameList">
+        <div class="nameBox slideIn fadeOut" ng-repeat="item in nameList">
+            房间{{$index+1}}
+            <input type="text"
+               ng-model="hotelOrder.name[$index]" placeholder="住客{{$index+1}}">
+        </div>
+    </div>
+    <div class="phone">
+        手机号码
+        <input type="text" ng-model="hotelOrder.phone" placeholder="手机号码">
+    </div>
+    <div class="cl"></div>
+    <button type="submit" ng-click="submitOrder(roomId)" ng-show="isLoaded">提交订单</button>
+    <img class="loading fr" src="../../frontend/static/img/loading.gif" ng-show="!isLoaded">
+    <span class="totalPrice fr">¥{{price}} * {{hotelOrder.roomNum}} = <span class="total">¥{{price*hotelOrder.roomNum}}</span></span>
+</div>

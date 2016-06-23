@@ -1,0 +1,72 @@
+home .container{
+    width:100%;
+    min-height:100vh;
+    background:url("/frontend/static/img/background.jpg") center no-repeat;
+    background-size:cover;
+    text-align: center;
+}
+home .container>.topBox{
+    text-align: left;
+    height:60px;
+    line-height:60px;
+}
+home .container>.topBox>.logo{
+    color:white;
+    font-size: 24px;
+    margin-left: 10%;
+}
+home .container>.topBox>.logo>i{
+    font-size: 28px;
+    margin-right: 8px;
+}
+home .container>.conBox{
+    padding-top:9%;
+}
+home .container>.conBox .slogan{
+    font-size:100px;
+    letter-spacing: 20px;
+    color:white;
+}
+home .container>.conBox .subSlogan{
+    margin-top: 10px;
+    font-size:24px;
+    letter-spacing: 4px;
+    color:#dadada;
+}
+home .container>.conBox .buttonBox{
+    margin-top: 40px;
+}
+home .container>.conBox .buttonBox>button{
+    border:0;
+    border-radius:5px;
+    background-color: #00c482;
+    color:white;
+    width:120px;
+    height:50px;
+    font-size:18px;
+    cursor:pointer;
+}
+home .container>.conBox .buttonBox>button>i{
+    font-size: 24px;
+    margin-right: 10px;
+}
+home .container>.conBox .buttonBox>button:last-child{
+    margin-left: 20px;
+}
+home .container>.conBox .buttonBox>button:hover{
+    background-color: #00da8a;
+}
+home .container>.footer{
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    height:50px;
+    line-height:50px;
+    margin:auto;
+    left:0;
+    right:0;
+    bottom:0;
+}
+home .container>.footer>.copyright{
+    font-size: 18px;
+}

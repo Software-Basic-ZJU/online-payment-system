@@ -1,0 +1,121 @@
+hotel-detail .box{
+    width:1000px;
+    margin:100px auto;
+}
+hotel-detail .box .noRes{
+    margin-top: 40px;
+    text-align: center;
+    font-size:24px;
+}
+hotel-detail .box>.infoBox{
+    text-align: center;
+}
+hotel-detail .box>.infoBox>img{
+    width:400px;
+    height:200px;
+    margin-right:20px;
+}
+hotel-detail .box>.infoBox>.mainBox{
+    width:580px;
+    height:200px;
+}
+hotel-detail .box>div *{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+hotel-detail .box>.infoBox>.mainBox>div{
+    height:100px;
+    line-height:100px;
+}
+hotel-detail .box>.infoBox>.mainBox>.hotelName{
+    width:100%;
+    font-size: 36px;
+    letter-spacing: 5px;
+    color:#0099CC;
+    border-bottom:1px solid #e1eaec;
+}
+hotel-detail .box>.infoBox>.mainBox>.star{
+    color:#ff9113;
+    width:20%;
+    font-size:24px;
+}
+hotel-detail .box>.infoBox>.mainBox>.address{
+    width:50%;
+    font-size:16px;
+}
+hotel-detail .box>.infoBox>.mainBox>.score{
+    width:30%;
+    font-size:20px;
+}
+hotel-detail .box>.infoBox>.mainBox>.score>span{
+    color:#0099CC;
+    font-size:28px;
+}
+hotel-detail .box>.roomBox{
+    margin-top: 50px;
+}
+hotel-detail .box>.roomBox>filter-tabs button{
+    padding:0px 150px;
+    font-size:18px;
+    letter-spacing: 5px;
+}
+hotel-detail .box>.roomBox>.roomList{
+    text-align: center;
+}
+hotel-detail .box>.roomBox>.roomList>div{
+    box-sizing: border-box;
+    border:1px solid transparent;
+    height:100px;
+    line-height:100px;
+    font-size:18px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+hotel-detail .box>.roomBox>.roomList>div:hover{
+    border:1px solid #0099CC;
+}
+hotel-detail .box>.roomBox>.roomList .roomName{
+    width:350px;
+}
+hotel-detail .box>.roomBox>.roomList .price{
+    width:350px;
+    color: #0099CC;
+}
+hotel-detail .box>.roomBox>.roomList button{
+    color:coral;
+    width:200px;
+    height:80px;
+    font-size:18px;
+    border:0;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+hotel-detail .box>.roomBox>.roomList button:hover{
+    color:#ff440a;
+}
+hotel-detail .modalBox{
+    margin-top: -250px;
+    margin-left: -200px;
+}
+hotel-detail .commentList{
+    margin-top: 100px;
+}
+hotel-detail .commentList>.tabs{
+    width:150px;
+    height:50px;
+    line-height:50px;
+    text-align: center;
+    font-size:18px;
+    letter-spacing: 5px;
+    background-color: #0099cc;
+    color:white;
+}

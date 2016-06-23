@@ -1,0 +1,92 @@
+flight-order .box{
+    width:1000px;
+    margin:100px auto;
+}
+flight-order button{
+    cursor:pointer;
+    border:0;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+flight-order flight-item .flightItem{
+    background-color: #f6fdff;
+}
+flight-order flight-item button{
+    display: none;
+}
+flight-order .title{
+    font-size: 24px;
+    margin:20px 0px;
+}
+flight-order .title>i{
+    font-size:18px;
+    color:#0099CC;
+    margin-left: 20px;
+    cursor:pointer;
+}
+flight-order .box>.psgBox{
+    margin-top: 30px;
+}
+flight-order .box>.psgBox>.psgItem{
+    margin-top:10px;
+    padding:20px;
+    background-color: #f6fdff;
+}
+flight-order .box>.psgBox>.psgItem>div{
+    margin-top:10px;
+}
+flight-order .box>.psgBox>.psgItem>div:first-child{
+    font-size: 18px;
+    color:#666666;
+}
+flight-order .box>.psgBox>.psgItem>div:first-child>i{
+    margin-left: 400px;
+    font-size:20px;
+    color:#0099CC;
+    cursor:pointer;
+}
+flight-order .box>.psgBox>.psgItem>.name{
+    margin-left: 32px;
+}
+flight-order .box>.psgBox>.psgItem input[type="text"]{
+    width:200px;
+    height:30px;
+    padding-left:10px;
+    margin-left: 5px;
+}
+flight-order .box>.psgBox>.psgItem input[type="radio"] {
+    margin-right: 10px;
+    margin-left: 30px;
+}
+flight-order .box>.psgBox>.psgItem select{
+    width: 90px;
+    height:35px;
+    padding-left:5px;
+    margin-right:20px;
+}
+flight-order .box>.psgBox>.submitBox{
+    margin-top: 20px;
+}
+flight-order .box>.psgBox>.submitBox>.price{
+    margin-right: 30px;
+    font-size:20px;
+}
+flight-order .box>.psgBox>.submitBox>.price>.total{
+    font-size:28px;
+    color:coral;
+}
+flight-order .box>.psgBox>.submitBox>button{
+    padding:15px 25px;
+    background-color: #ff9113;
+    color:white;
+}
+flight-order .box>.psgBox>.submitBox>.loading{
+    margin-right:50px;
+    margin-top: 0px;
+}
+flight-order .box>.psgBox>.submitBox>button:hover{
+    background-color: #ffac25;
+}

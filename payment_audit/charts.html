@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>审计员操作界面</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><span>审计员</span>操作</a>
+				<ul class="user-menu">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> 用户 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="password.html"><span class="glyphicon glyphicon-cog"></span>修改密码</a></li>
+							<li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span>退出登录</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+							
+		</div><!-- /.container-fluid -->
+	</nav>
+		
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<ul class="nav menu">
+			<li><a href="index.html"><span class="glyphicon glyphicon-dashboard"></span>查看交易记录</a></li>
+			<li><a href="audit.html"><span class="glyphicon glyphicon-th"></span>审计</a></li>
+			<li class="active"><a href="charts.html"><span class="glyphicon glyphicon-stats"></span>图表统计</a></li>
+			<li><a href="account.html"><span class="glyphicon glyphicon-list-alt"></span>对账</a></li>
+			<li><a href="search.html"><span class="glyphicon glyphicon-pencil"></span>检索</a></li>
+			<!--<li><a href="panels.html"><span class="glyphicon glyphicon-info-sign"></span> 功能 &amp; 暂定</a></li>
+			<li class="parent ">
+				<a href="#">
+					<span class="glyphicon glyphicon-list"></span> Dropdown <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
+				</a>
+				<ul class="children collapse" id="sub-item-1">
+					<li>
+						<a class="" href="#">
+							<span class="glyphicon glyphicon-share-alt"></span> Sub Item 1
+						</a>
+					</li>
+					<li>
+						<a class="" href="#">
+							<span class="glyphicon glyphicon-share-alt"></span> Sub Item 2
+						</a>
+					</li>
+					<li>
+						<a class="" href="#">
+							<span class="glyphicon glyphicon-share-alt"></span> Sub Item 3
+						</a>
+					</li>
+				</ul>
+			</li> -->
+			<li role="presentation" class="divider"></li>
+			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span>登录页面</a></li>
+		</ul>
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+				<li class="active">图表统计</li>
+			</ol>
+		</div><!--/.row-->
+		
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">前两天日交易记录统计折线图（灰色为第一日，蓝色为第二日）</div>
+					<div class="panel-body">
+						<div class="canvas-wrapper">
+							<canvas class="main-chart" id="line-chart" height="200" width="600"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">前两个月的交易记录对比柱状图（灰色代表第一个月，蓝色代表第二个月）</div>
+					<div class="panel-body">
+						<div class="canvas-wrapper">
+							<canvas class="main-chart" id="bar-chart" height="200" width="600"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->		
+		
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">所有交易记录状态统计</div>
+					<div class="panel-body">
+						<div class="canvas-wrapper">
+							<canvas class="chart" id="pie-chart" ></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">所有交易记录价格区间统计</div>
+					<div class="panel-body">
+						<div class="canvas-wrapper">
+							<canvas class="chart" id="doughnut-chart" ></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+											
+	</div>	<!--/.main-->
+	  
+	<!--<script type="text/javascript" src="charts.php"></script> -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<!--<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script> -->
+	<script src="js/bootstrap-datepicker.js"></script>
+
+	<script>
+		!function ($) {
+		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
+		        $(this).find('em:first').toggleClass("glyphicon-minus");      
+		    }); 
+		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+	</script>	
+</body>
+
+</html>

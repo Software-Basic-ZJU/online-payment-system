@@ -1,0 +1,28 @@
+<div class="{{!isSearch?'flightFormA':'flightFormB'}}">
+    <h2 ng-show="!isSearch">机票预订</h2>
+    <form>
+        <div class="city fl">
+            <div class="title fl">从</div>
+            <input type="text" ng-model="flightForm.from" placeholder="出发地">
+        </div>
+        <div class="city fl">
+            <div class="title fl">到</div>
+            <input type="text" ng-model="flightForm.to" placeholder="目的地">
+        </div>
+        <div class="dateBox">
+            <div class=" title fl">出发日期</div>
+            <datepicker date-format="yyyy-MM-dd" date-min-limit="{{today}}">
+                <input type="text" ng-model="flightForm.leaveTime" placeholder="出发日期">
+            </datepicker>
+        </div>
+        <div  class="dateBox">
+            <div class=" title fl">返回日期</div>
+            <datepicker date-format="yyyy-MM-dd" date-min-limit="{{flightForm.leaveTime}}">
+                <input type="text" ng-model="flightForm.reachTime" placeholder="返回日期" ng-show="isAble">
+            </datepicker>
+            <div class="disableBox fl" ng-show="!isAble" ng-click="canChoiceBack()">返回时间</div>
+        </div>
+        <button type="submit" ng-click="flightSearch()" class="fr">立即搜索</button>
+        <div class="cl"></div>
+    </form>
+</div>

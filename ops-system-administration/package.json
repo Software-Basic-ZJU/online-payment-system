@@ -1,0 +1,51 @@
+{
+  "name": "ops-system-administration",
+  "version": "0.1.0",
+  "description": "the subsystem of online payment system",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js",
+    "build": "webpack",
+    "build-dev": "webpack -w",
+    "add-admin": "node add-admin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.coding.net:HeleyChen/ops-system-administration.git"
+  },
+  "author": "G10",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-1"
+    ],
+    "plugins": []
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.13.4",
+    "express-response-builder": "^0.1.1",
+    "express-session": "^1.13.0",
+    "morgan": "^1.7.0",
+    "mysql": "^2.10.2",
+    "socket.io": "^1.4.6",
+    "superagent": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "material-ui": "^0.15.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.4.1",
+    "react-tap-event-plugin": "^1.0.0",
+    "webpack": "^1.13.1"
+  }
+}
