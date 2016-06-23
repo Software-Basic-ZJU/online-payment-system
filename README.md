@@ -8,6 +8,7 @@
 	* 酒店、机票订购系统
 * payment_audit: 审计系统 [传送门](http://tx.zhelishi.cn/audit)
 * ops-system-administration: 系统管理系统 [传送门](https://tx.zhelishi.cn:3000)
+* schema: MySQL数据库表文件
 
 ###技术选型:
 ####前端:
